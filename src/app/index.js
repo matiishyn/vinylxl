@@ -5,10 +5,9 @@ angular.module('vx', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngReso
         $stateProvider
             .state('home', {
                 url: '/',
-                templateUrl: 'app/main/main.html',
+                templateUrl: 'app/views/main/main.html',
                 controller: 'MainCtrl'
             });
 
         $urlRouterProvider.otherwise('/');
-    })
-;
+    });
