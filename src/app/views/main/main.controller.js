@@ -1,6 +1,6 @@
 (function(module) {
-  'use strict';
+    'use strict';
 
-  module.controller('MainCtrl', function ($scope) {});
+    module.controller('MainCtrl', function () {});
 
 })(angular.module('vx'));

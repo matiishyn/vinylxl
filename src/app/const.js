@@ -2,6 +2,6 @@
     'use strict';
 
     module
-    .constant('SWAPI_REST_API', 'http://swapi.co/api/') //SW REST API test service
+    .constant('API_URL', 'https://restapi-vinylxl.rhcloud.com/api/v1.0/'); 
 
 })(angular.module('vx'));
