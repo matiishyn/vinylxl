@@ -1,0 +1,34 @@
+{
+  "searchElement": {
+    "placeholder": "Search Here"
+  },
+  "cart": {
+    "cartLink": "Cart",
+    "shoppingCartHeader": "SHOPPING CART",
+    "cartTotalHeader": "CART TOTAL"
+  },
+  "signUp": {
+    "title": "FOR EXCLUSIVE SALES AND PRODUCT NEWS",
+    "btn": "SIGN UP"
+  },
+  "footer": {
+    "ourStore": "OUR STORE",
+    "link1": "Lorem Ipsum",
+    "siteMap": "SITE MAP",
+    "link2": "Gravida nibh vel velit",
+    "support": "SUPPORT",
+    "link3": "Auctor aliquet",
+    "social": "SOCIAL",
+    "contactUs": "CONTACT US",
+    "emailPlaceholder": "Enter email",
+    "sendTitle": "SEND MESSAGE"
+  },
+
+  "productPage": {
+    "noProductDescr": "No product description",
+    "addToCart": "Add to Cart",
+    "similarProducts": "Customer Who Bought this item also bought",
+    "tracklist": "Tracklist",
+    "productDetails": "Product Details"
+  }
+}
