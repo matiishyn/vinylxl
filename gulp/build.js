@@ -24,7 +24,12 @@ module.exports = function(options) {
       .pipe(gulp.dest(options.tmp + '/partials/'));
   });
 
-  gulp.task('html', ['inject', 'partials'], function () {
+  gulp.task('articles', function() {
+    return gulp.src(options.src + '/articles/*.html')
+        .pipe(gulp.dest(options.dist + '/articles/'));
+  });
+
+  gulp.task('html', ['inject', 'partials', 'articles'], function () {
     var partialsInjectFile = gulp.src(options.tmp + '/partials/templateCacheHtml.js', { read: false });
     var partialsInjectOptions = {
       starttag: '<!-- inject:partials -->',
@@ -67,10 +72,28 @@ module.exports = function(options) {
   // Only applies for fonts from bower dependencies
   // Custom fonts are handled by the "other" task
   gulp.task('fonts', function () {
-    return gulp.src($.mainBowerFiles())
+    return gulp.src($.mainBowerFiles().concat(options.wiredep.directory + '/bootstrap/fonts/**/*'))
       .pipe($.filter('**/*.{eot,svg,ttf,woff,woff2}'))
       .pipe($.flatten())
       .pipe(gulp.dest(options.dist + '/fonts/'));
+  });
+
+  gulp.task('config-dev', function () {
+    return gulp.src(options.src + '/app/config.development.js')
+      .pipe($.rename('config.js'))
+      .pipe(gulp.dest(options.dist + '/app/'));
+  });
+
+  gulp.task('config-prod', function () {
+    return gulp.src(options.src + '/app/config.production.js')
+      .pipe($.rename('config.js'))
+      .pipe(gulp.dest(options.dist + '/app/'));
+  });
+
+  gulp.task('config-local', function () {
+    return gulp.src(options.src + '/app/config.local.js')
+      .pipe($.rename('config.js'))
+      .pipe(gulp.dest(options.dist + '/app/'));
   });
 
   gulp.task('other', function () {
@@ -86,4 +109,6 @@ module.exports = function(options) {
   });
 
   gulp.task('build', ['html', 'fonts', 'other']);
+  gulp.task('build:dev', ['html', 'fonts', 'other', 'config-dev']);
+  gulp.task('build:prod', ['html', 'fonts', 'other', 'config-prod']);
 };

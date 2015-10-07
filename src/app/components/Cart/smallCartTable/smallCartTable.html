@@ -1,0 +1,42 @@
+<table class="table" id="small-cart-table">
+    <tbody>
+    <tr ng-repeat="product in cartTable.cart.products track by $index">
+        <td class="cart-product-info">
+
+            <div class="media">
+                <div class="media-left media-middle">
+                    <a href="#" ui-sref="home.product({id: product._id, title:product.title})">
+                        <img fallback-image
+                             ng-src="{{cartTable.commonMethods.getCoverImg(product.product_id, 'medium', '1')}}"
+                             alt="{{::product.title}}"
+                             class="media-object"/>
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading" tooltip="{{product.title}}">{{product.title}}</h4>
+
+                    <p>{{cartTable.commonMethods.getArtists(product.artists)}}</p>
+                </div>
+            </div>
+
+        </td>
+        <td class="text-center">
+            <span ng-if="product.quantity > 1">x{{product.quantity}}</span>
+        </td>
+        <td class="price">
+            {{(product.special_price || product.retail_price) * product.quantity | retailPrice | currency:'&#8364;' | euroCurrency}}
+        </td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td>
+            {{'cart.cartTotal.Total' | translate}}
+        </td>
+        <td></td>
+        <td class="price">
+            {{cartTable.cart.subtotal | retailPrice | currency:'&#8364;' | euroCurrency}}
+        </td>
+    </tr>
+    </tfoot>
+</table>

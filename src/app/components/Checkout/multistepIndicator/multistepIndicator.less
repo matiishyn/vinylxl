@@ -1,0 +1,94 @@
+.multistep-indicator-nav {
+  ul {
+    border: 2px solid #e9e9e9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    overflow: hidden;
+
+    li {
+      height: 28px;
+      margin: 0;
+      padding: 0;
+      flex: 1;
+      background-color: #fff;
+      padding-left: 26px;
+
+      // increment counter
+      &:nth-child(n+2) {
+        counter-increment: steps;
+      }
+
+      // cart icon
+      &:first-child {
+        background-color: @brand-success;
+        color: #fff;
+        flex: inherit;
+        border-left: none;
+        padding: 3px 15px 0;
+
+        span {
+          .right-arrow(@brand-success, #e9e9e9)
+        }
+      }
+
+      a {
+        height: 100%;
+        display: block;
+        margin: 0;
+        padding: 4px;
+        text-align: center;
+        color: #999;
+        font-weight: bold;
+        background-color: #fff;
+        font-size: 14px;
+
+        // counter
+        span {
+          &:before {
+            content: counter(steps);
+            display: inline-block;
+            border: 2px solid;
+            font-size: 11px;
+            line-height: 12px;
+            width: 18px;
+            height: 17px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 8px;
+            position: relative;
+            top: -2px;
+          }
+        }
+
+        &:after {
+          content: '';
+        }
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      // current
+      &.current {
+        a {
+          color: @brand-success;
+        }
+      }
+
+      // disabled
+      &.disabled {
+        a {
+          color: #c2c2c2;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+
+  // arrows - https://css-tricks.com/triangle-breadcrumbs/
+  a {
+    .right-arrow(#fff, #e9e9e9)
+  }
+}

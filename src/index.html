@@ -3,8 +3,21 @@
   <head>
     <meta charset="utf-8">
     <title>VinylXL</title>
+    <base href="/">
     <meta name="description" content="">
+    <meta name="fragment" content="!"/>
     <meta name="viewport" content="width=device-width">
+    <meta name="keywords" content="vinyl, records, vinylrecords, platen, platenspeler">
+
+    <!-- Begin Cookie Consent plugin by Silktide -->
+    <script type="text/javascript">
+        window.cookieconsent_options = {
+            "theme": "dark-bottom"
+        };
+    </script>
+    <!-- End Cookie Consent plugin -->
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
@@ -24,8 +37,8 @@
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
-    <div ui-view></div>
+    <ng-include src="'app/components/Common/angular-ui-templates.html'"></ng-include>
+    <div class="root-element" ui-view ng-class="{ie: isIE()}"></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -36,6 +49,8 @@
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
       ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
+
+    <script src="app/config.js"></script>
 
     <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->

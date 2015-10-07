@@ -1,0 +1,14 @@
+<div class="col-sm-9 order-history">
+
+    <h2 class="block">{{'menu.OrderStatusHistory' | translate}}</h2>
+
+    <div>
+
+        <order-history-table ng-if="vm.orders.length" orders="vm.orders"></order-history-table>
+
+        <p ng-if="!vm.orders.length">{{'menu.noOrderHistoryLabel' | translate}}</p>
+
+    </div>
+
+
+</div>

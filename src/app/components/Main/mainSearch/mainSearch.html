@@ -1,0 +1,54 @@
+<script type="text/ng-template" id="typeaheadCustomTmpl.html">
+    <a>
+        <span bind-html-unsafe="match.model.title | typeaheadHighlight:query"></span> -
+        <span bind-html-unsafe="match.model.artists[0].name | typeaheadHighlight:query"></span>
+
+    </a>
+</script>
+<div class="main-search">
+    <form class="navbar-form" name="mainSearchForm"
+          ng-submit="searchCtrl.search(mainSearchForm)">
+
+        <div class="input-group">
+            <div class="input-group-btn search-dropdown">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                    {{'searchElement.labels.' + searchCtrl.searchOpt | translate}}
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a ng-repeat="item in searchCtrl.searchDropdownOptions" ng-click="searchCtrl.setSearchOpt(item)" href="#">
+                            {{searchCtrl.getDropdownOptionLabel(item)}}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <input class="form-control" name="search"
+                   type="search"
+                   required
+                   ng-model="searchCtrl.searchQuery"
+                   placeholder="{{'searchElement.placeholder' | translate}}"
+                   autocomplete="off" autofocus="autofocus"
+
+                   typeahead="product for product in searchCtrl.getSearchAutocompleteResults($viewValue)"
+                   typeahead-template-url="typeaheadCustomTmpl.html"
+                   typeahead-loading="typeaheadLoading"
+                   typeahead-on-select="searchCtrl.openProductPage($item, $model, $label)"
+                   typeahead-focus-first="false"
+                   typeahead-wait-ms="300">
+
+            <i ng-if="typeaheadLoading" class="fa fa-spinner fa-pulse typeahead-loading"></i>
+
+            <span class="input-group-btn search-btn">
+                <button class="btn btn-default" type="button" ng-click="searchCtrl.search(mainSearchForm)">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true">
+                    </span>
+                </button>
+            </span>
+
+        </div>
+    </form>
+</div>

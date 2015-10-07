@@ -1,0 +1,49 @@
+<div class="grey-container login-page">
+    <div class="container">
+
+        <!--SOCIAL LOGIN-->
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <white-box class="text-center">
+                    <h5>{{'login.signInSoc' | translate}}</h5>
+
+                    <div class="button-group col-sm-8 col-sm-offset-2">
+                        <div class="col-md-6">
+                            <button class="btn btn-block btn-social btn-facebook" ng-click="registrationViaFacebook()">
+                                <i class="fa fa-facebook"></i>Facebook
+                            </button>
+                        </div>
+
+                        <div class="col-md-6">
+                            <button class="btn btn-block btn-social btn-google" ng-click="registrationViaGoogle()">
+                                <i class="fa fa-google-plus"></i>Google
+                            </button>
+                        </div>
+
+                    </div>
+                </white-box>
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+
+            <div class="col-md-8 col-md-offset-2">
+                <div class="flip-container">
+                    <div class="flipper">
+
+                        <!--LOGIN CONTAINER-->
+                        <div class="front sign-in-container pull-left">
+                            <ng-include src="'app/views/User/loginA/login-tmpl.html'"></ng-include>
+                        </div>
+
+                        <!--RESTORE PASSWORD-->
+                        <div class="back sign-in-container pull-left">
+                            <ng-include src="'app/views/User/loginA/restore-pass-tmpl.html'"></ng-include>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

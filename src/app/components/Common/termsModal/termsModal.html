@@ -1,0 +1,13 @@
+<div class="modal-header">
+    <h3 class="modal-title">{{'terms.link' | translate}}</h3>
+
+    <div class="close-modal-x" ng-click="cancel()">
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+    </div>
+</div>
+<div class="modal-body">
+    <ng-include src="'articles/terms-'+currentLang+'.html'"></ng-include>
+</div>
+<div class="modal-footer text-center">
+    <button class="btn btn-info" ng-click="cancel()">{{'terms.closeModalBtn' | translate}}</button>
+</div>

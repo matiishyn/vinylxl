@@ -1,0 +1,31 @@
+.cart-total-table {
+  font-size: 15px;
+  margin-top: -10px;
+
+  tbody {
+
+    // remove upper borders
+    tr:first-child {
+      td {
+        border: none;
+      }
+    }
+
+    // add border-bottom to last row
+    tr:last-child {
+      td {
+        border-bottom: 2px solid @table-border-color;
+      }
+    }
+
+    tr {
+      td:first-child {
+        font-weight: bold;
+      }
+
+      td:last-child {
+        text-align: right;
+      }
+    }
+  }
+}

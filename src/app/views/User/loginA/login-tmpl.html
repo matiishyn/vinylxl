@@ -1,0 +1,61 @@
+<white-box>
+    <div class="row">
+
+        <div class="col-md-offset-1 col-md-10 col-lg-8 col-lg-offset-2">
+
+            <h5 class="text-center">{{'login.signInCustom' | translate}}</h5>
+
+            <form name="signInForm" novalidate>
+                <div class="form-group"
+                     ng-class="{'has-error': signInForm.email.$invalid && signInForm.showValidation}">
+                    <input type="email" class="form-control" name="email" required
+                           ng-model="loginFormData.email"
+                           placeholder="{{'login.emailPc' | translate}}">
+                                    <span ng-if="signInForm.email.$invalid && signInForm.showValidation"
+                                          class="glyphicon glyphicon-exclamation-sign form-control-feedback"
+                                          aria-hidden="true"></span>
+                </div>
+                <div class="form-group"
+                     ng-class="{'has-error': signInForm.password.$invalid && signInForm.showValidation}">
+                    <input type="password" class="form-control" name="password" required
+                           ng-model="loginFormData.password"
+                           placeholder="{{'login.passPc' | translate}}">
+                                    <span ng-if="signInForm.password.$invalid && signInForm.showValidation"
+                                          class="glyphicon glyphicon-exclamation-sign form-control-feedback"
+                                          aria-hidden="true"></span>
+                </div>
+
+                <div class="form-group">
+                    <a ng-click="flipRestorePassAndLogin()" href="#">{{'login.passRec' | translate}}</a>
+                </div>
+
+                <div class="checkbox custom-checkbox">
+                    <input name="rememberMe" id="rememberMe"
+                           ng-model="loginFormData.rememberMe"
+                           type="checkbox">
+                    <label tooltip="{{'login.rememberP' | translate}}" for="rememberMe">{{'login.rememberH' | translate}}</label>
+                </div>
+
+                <div ng-if="signInForm.$invalid && signInForm.showValidation" class="invalid-msg">
+                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                    <span class="help-block has-error">{{'address.fieldsInvalid' | translate}}</span>
+                </div>
+
+                <div class="button-group col-sm-offset-2 col-sm-8 col-md-12 col-md-offset-0">
+                    <div class="col-md-6">
+                        <button type="submit" ng-click="login()" class="btn btn-success btn-lg btn-block">
+                            {{'login.signInBtn' | translate}}
+                        </button>
+                    </div>
+
+                    <div class="col-md-6">
+                        <button type="submit" ng-click="signup()" class="btn btn-success btn-lg btn-block signup-btn">
+                            {{'login.signUpBtn' | translate}}
+                        </button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</white-box>

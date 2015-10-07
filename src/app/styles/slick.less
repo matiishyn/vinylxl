@@ -1,0 +1,25 @@
+.slick-prev.slick-arrow, .slick-next.slick-arrow {
+  z-index: 1;
+  top: 46%;
+
+  &:before {
+    color: @vinyl-red;
+    font-family: FontAwesome;
+  }
+}
+
+.slick-next.slick-arrow {
+  right: -15px;
+  &:before {
+    content: "\f138";
+  }
+
+
+}
+
+.slick-prev.slick-arrow {
+  left: -15px;
+  &:before {
+    content: "\f137";
+  }
+}

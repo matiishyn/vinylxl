@@ -1,0 +1,130 @@
+.products-filter {
+  transition: all .5s;
+
+  .row {
+    &:first-child {
+      display: flex;
+      margin-bottom: 25px;
+
+      .btn-group {
+        margin-right: 10px;
+      }
+
+      .filters-summary {
+        flex: 1;
+        margin: 0;
+        line-height: 35px;
+        //font-style: italic;
+        display: flex;
+
+
+        & > div {
+          flex: 1;
+          padding: 0 15px;
+          border-right: 1px solid #d0d6d6;
+        }
+
+        h4 {
+          margin: 0;
+        }
+
+        .glyphicon-remove {
+          cursor: pointer;
+        }
+
+        .summary-labels {
+          filter-label {
+            float: left;
+          }
+        }
+
+      }
+    }
+
+    // Second row with filters
+    &.row-filters {
+      display: none;
+
+      label {
+        font-weight: normal;
+      }
+
+      .form-control {
+        padding: 0;
+        border: none;
+        height: auto;
+        box-shadow: none;
+        background-color: transparent;
+      }
+
+      input[daterangepicker] {
+        border: 1px solid #9B9F9F;
+        border-top: 4px solid #9B9F9F;
+        background: #fff none;
+        padding-left: 5px;
+        height: 34px;
+      }
+
+      ui-select {
+        min-width: 80%;
+      }
+
+      .select2-filter {
+        // overwrite select2 styles
+        .select2-choices {
+          //border: 0;
+          border: 1px solid #9B9F9F;
+          border-top: 4px solid #9B9F9F;
+          background: #fff none;
+          cursor: default;
+          height: 26px;
+          line-height: 17px;
+        }
+        .select2-drop.select2-with-searchbox.select2-drop-active {
+          border-color: #9B9F9F;
+        }
+        .select2-choices {
+
+        }
+      }
+
+      .filter-actions {
+        label {
+          display: block;
+        }
+        button {
+          width: calc(~"50% - 10px");
+          height: 35px;
+        }
+        .apply-btn {
+          margin-right: 10px;
+          box-shadow: none;
+        }
+      }
+
+    }
+  }
+
+  .sorting-page-items {
+    //background-color: #d0d6d6;
+    float: right;
+    //outline: 7px solid #d0d6d6;
+    //border-left: 1px solid #d0d6d6;
+    padding-left: 15px;
+  }
+
+  hr {
+    margin: 0 0 10px 0;
+  }
+
+}
+
+.filters-visible {
+  &.products-filter {
+    //background-color: #d0d6d6;
+
+    .container {
+
+    }
+  }
+}

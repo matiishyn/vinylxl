@@ -1,0 +1,29 @@
+<script type="text/ng-template" id="template/pagination/pagination.html">
+
+    <ul class="pagination">
+        <li ng-if="::directionLinks" ng-class="{disabled: noPrevious()||ngDisabled}" class="pagination-prev">
+            <a href ng-click="selectPage(page - 1, $event)">
+                <img src="assets/ui/previous.png" alt="Previous" ng-click="toggle.previous()" tooltip="Previous"/>
+            </a>
+        </li>
+        <li ng-if="::boundaryLinks" ng-class="{disabled: ngDisabled, active: page === 1}" class="pagination-page">
+            <a href ng-click="selectPage(1, $event)">1</a>
+        </li>
+
+        <li ng-repeat="page in pages track by $index"
+            ng-class="{active: page.active,disabled: ngDisabled&&!page.active}"
+            ng-if="page.text !== totalPages && page.text !== 1"
+            class="pagination-page">
+            <a href ng-click="selectPage(page.number, $event)">{{page.text}}</a>
+        </li>
+
+        <li ng-if="::boundaryLinks" ng-class="{disabled: ngDisabled, active: page === totalPages}" class="pagination-page">
+            <a href ng-click="selectPage(totalPages, $event)">{{totalPages}}</a>
+        </li>
+        <li ng-if="::directionLinks" ng-class="{disabled: noNext()||ngDisabled}" class="pagination-next">
+            <a href ng-click="selectPage(page + 1, $event)">
+                <img src="assets/ui/next.png" alt="Next" ng-click="toggle.next()" tooltip="Next"/>
+            </a>
+        </li>
+    </ul>
+</script>

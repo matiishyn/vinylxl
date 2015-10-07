@@ -1,0 +1,67 @@
+<div class="app-footer">
+    <div class="container">
+        <div class="row">
+
+            <!--About-->
+            <div class="col-sm-2">
+                <h5>{{'footer.About' | translate}}</h5>
+                <ul class="list-unstyled">
+                    <li class="static" translate="footer.AboutStr"></li>
+                    <li>&nbsp;</li>
+                    <li class="static" translate="footer.copyrightInfo"></li>
+                </ul>
+            </div>
+
+            <!--General-->
+            <div class="col-sm-2">
+                <h5>{{'footer.General' | translate}}</h5>
+                <ul class="list-inline">
+                    <li><a href="#" ng-click="footerCtrl.openModal('footer.Cookies', 'cookies')">{{'footer.Cookies' | translate}}</a></li>
+                    <li><a href="#" ng-click="footerCtrl.openModal('footer.Disclaimer', 'disclaimer')">{{'footer.Disclaimer' | translate}}</a></li>
+                    <li><a href="#" ng-click="footerCtrl.openModal('footer.Terms', 'terms')">{{'footer.Terms' | translate}}</a></li>
+                </ul>
+            </div>
+
+            <!--Ordering-->
+            <div class="col-sm-2">
+                <h5>{{'footer.Ordering' | translate}}</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" ng-click="footerCtrl.openModal('footer.Payment', 'payment')">{{'footer.Payment' | translate}}</a></li>
+                    <li><a href="#" ng-click="footerCtrl.openModal('footer.Returns', 'returns')">{{'footer.Returns' | translate}}</a></li>
+                </ul>
+                <div class="payment-methods-imgs">
+                    <img ng-src="assets/ui/payment_10.png" alt=""/>
+                    <img ng-src="assets/ui/payment_138.png" alt=""/>
+                    <img ng-src="assets/ui/payment_436.png" alt=""/>
+                    <img ng-src="assets/ui/payment_559.png" alt=""/>
+                </div>
+            </div>
+
+            <!--Contact-->
+            <div class="col-sm-2">
+                <h5>{{'footer.Contact' | translate}}</h5>
+                <ul class="list-unstyled">
+                    <li class="static" translate="footer.ContactStr"></li>
+                </ul>
+            </div>
+
+            <!--Contact Us-->
+            <div class="col-sm-4">
+                <h5>{{'footer.contactUs' | translate}}</h5>
+                <ng-form name="contactUsForm">
+                    <input type="email" class="form-control" name="email"
+                           required
+                           ng-model="footerCtrl.data.email"
+                           placeholder="{{'footer.emailPlaceholder' | translate}}"/>
+                    <textarea class="form-control" rows="3" required ng-model="footerCtrl.data.msg"></textarea>
+
+                    <div class="text-right">
+                        <button ng-disabled="contactUsForm.$invalid" type="submit" ng-click="footerCtrl.sendContactUsMsg()"
+                                class="btn btn-default">{{'footer.sendTitle' | translate}}
+                        </button>
+                    </div>
+                </ng-form>
+            </div>
+        </div>
+    </div>
+</div>

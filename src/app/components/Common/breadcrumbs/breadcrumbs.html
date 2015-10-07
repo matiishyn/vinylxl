@@ -1,0 +1,8 @@
+<div class="breadcrumbs">
+    <ul class="list-unstyled">
+        <li ng-repeat="item in breadcrumbsCtrl.data">
+            <a class="breadcrumb-element" ng-if="!$last" ui-sref="{{item.uiSref}}">{{item.title}}</a>
+            <span class="breadcrumb-element" ng-if="$last">{{item.title}}</span>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,19 @@
+<div class="cart-link-container">
+    <a class="cart-link" href="#" id="cart-link">
+        <span class="badge">
+            {{cartLink.cart.getNumberOfProducts()}}
+        </span>
+
+        <i class="fa fa-shopping-cart"></i>
+    </a>
+
+    <div class="cart-dropdown">
+        <h4 ng-if="!cartLink.cart.products.length" class="text-center">
+            {{'cart.noItemsMsg' | translate}}
+        </h4>
+        <small-cart-table ng-if="cartLink.cart.products.length"></small-cart-table>
+        <button ng-if="cartLink.cart.products.length" ui-sref="home.cart" type="button" class="btn btn-success btn-lg btn-block">
+            {{'cart.goToCartH' | translate}}
+        </button>
+    </div>
+</div>

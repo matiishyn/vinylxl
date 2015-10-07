@@ -1,0 +1,62 @@
+.btn-hover() {
+  box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+}
+
+.img-border() {
+  padding: 3px;
+  background-color: #fff;
+  border: 1px solid @img-border;
+  border-radius: 2px;
+}
+
+// used on Product page
+.h4-heading() {
+  font-size: 16px;
+  color: @price-color;
+  font-weight: bold;
+}
+
+.font-awesome-in-before() {
+  vertical-align: text-top;
+  display: inline-block;
+  margin-right: 5px;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: 20px;
+  text-rendering: auto;
+  transform: translate(0, 0);
+}
+
+.right-arrow(@arrow-bg-color, @arrow-border-color) {
+  position: relative;
+
+  &:after {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent; /* Go big on the size, and let overflow hide */
+    border-bottom: 20px solid transparent;
+    border-left: 12px solid @arrow-bg-color;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    right: -24px;
+    z-index: 2;
+  }
+
+  &:before {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 12px solid @arrow-border-color;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    margin-left: 2px;
+    right: -26px;
+    z-index: 1;
+  }
+}

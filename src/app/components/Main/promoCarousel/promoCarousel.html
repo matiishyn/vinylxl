@@ -1,0 +1,21 @@
+<div class="promo-carousel text-center">
+
+    <flex-slider flex-slide="s in slides track by $index" animation="fade" animation-loop="true"
+                 slideshow-speed="8000">
+        <li>
+            <div class="slide">
+                <img ng-src="{{s.image}}">
+                <div class="container text-center">
+                    <h1>{{s.text}}</h1>
+
+                    <button class="btn btn-lg" ng-click="openSales(s.action.type, s.action.ref, s.text)">
+                        {{s.action.text}}
+                    </button>
+
+                </div>
+            </div>
+
+
+        </li>
+    </flex-slider>
+</div>

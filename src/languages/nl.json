@@ -1,0 +1,354 @@
+{
+  "errorMsgs": {
+    "signUpError": "Deze gebruiker is al bekend in het systeem",
+    "noTracklist": "Nog geen tracklist bekend",
+    "serverError": "Server is not responding",
+    "requiredFields": "* verplicht veld",
+    "addressValidation": "Alle velden zijn verplicht",
+    "cookiesMsg": "Voor optimaal gebruik van deze website heb je cookies nodig.",
+    "cookiesClose": "Got it!"
+  },
+  "tooltips": {
+    "sortingAz": "Sorteren op titel",
+    "sortingFreq": "Sorteren op relevantie"
+  },
+  "infoMsgs": {
+    "redirectMsg1": "Je wordt doorgestuurd..",
+    "redirectMsg2": "in",
+    "redirectMsg3": "seconden.",
+    "loading": "LOADING",
+    "signUpSuccess": "Subscribed NL"
+  },
+  "modal": {
+    "saveBtn": "Opslaan",
+    "cancelBtn": "Annuleren",
+    "okBtn": "OK",
+    "closeBtn": "Sluiten",
+    "personalInfoH": "PERSOONLIJKE INFORMATIE"
+  },
+  "profile": {
+    "title": "MIJN ACCOUNT",
+    "personalInfoH": "PERSOONLIJKE INFORMATIE",
+    "username": "Gebruikersnaam:",
+    "name": "Naam:",
+    "first_name": "Voornaam:",
+    "last_name": "Achternaam:",
+    "house": "No.:",
+    "prefix": "Tussenvoegsel:",
+    "email": "E-mail:",
+    "addressH": "ADRES",
+    "address": {
+      "AddressLine": "Straat:",
+      "HouseNumber": "No.:",
+      "City": "Woonplaats:",
+      "Country": "Land:",
+      "postal_code": "Postcode:",
+      "Phone": "Telefoon:"
+    },
+    "OrderSummaryH": "ORDER OVERZICHT",
+    "noPendingOrders": "Geen openstaande orders.",
+    "noHistory": "Er zijn nog geen bestellingen geplaatst.",
+    "menu": {
+      "Overview": "Overzicht",
+      "PersonalInformation": "Persoonlijke Informatie",
+      "PendingOrders": "Openstaande Orders"
+    },
+    "editInfoBtn": "Persoonlijke Informatie Wijzigen"
+  },
+  "menu": {
+    "Overview": "Overzicht",
+    "PersonalInformation": "Persoonlijke Informatie",
+    "PendingOrders": "Openstaande Orders",
+    "OrderStatusHistory": "Order Status & Overzicht",
+    "noOrderHistoryLabel": "Er zijn nog geen bestellingen geplaatst",
+    "Label": "Label",
+    "MainGenre": "Hoofdgenre",
+    "Genre": "Genre",
+    "Style": "Style",
+    "Wishlist": "Wishlist",
+    "seeMore": "Meer...",
+    "searchLabel": "Zoek hier...",
+    "resetSearchTooltip": "Wissen",
+    "moreLabels": "Meer Labels...",
+    "moreGenres": "Meer Genres...",
+    "moreStyles": "Meer Styles...",
+    "Releases":"Release",
+    "moreReleases":"More Releases",
+    "Specials": "Special",
+    "moreSpecials":"More Specials"
+  },
+  "searchElement": {
+    "placeholder": "Zoek hier...",
+    "labels": {
+      "all": "Alle",
+      "artists.name": "Artiest",
+      "title": "Titel",
+      "genre.descr": "Genre",
+      "styles": "Style",
+      "eancode": "EAN",
+      "Label": "Label",
+      "ProductNr": "Product nr.",
+      "Format": "Format",
+      "CountryOrigin": "Land van herkomst",
+      "ReleaseDate": "Release datum",
+      "EAN": "EAN",
+      "Delivery": "Levering",
+      "days": "dagen",
+      "oneWeek": "meer dan 1 week",
+      "twoWeeks": "meer dan 2 weken"
+    }
+  },
+  "product": {
+    "units": "Aantal (platen)"
+  },
+  "filters": {
+    "Filters": "Filters",
+    "Origin": "Herkomst",
+    "Media": "Media",
+    "ReleaseDate": "Release datum",
+    "dateFrom": "Van:",
+    "dateTo": "Tot:",
+    "SelectOrigin": "Selecteer Herkomst",
+    "SelectMedia": "Selecteer Media",
+    "ApplyBtn": "Toepassen",
+    "ResetBtn": "Reset",
+    "allOriginPh": "Alle Landen",
+    "allMediaPh": "Alle Media",
+    "removeFilterTooltip": "Verwijder Filter",
+    "sortByDate": "Sorteer op release datum",
+    "itemsPerPage": "Aantal producten per pagina",
+    "origin": {
+      "Europe": "Europa",
+      "Import": "Import",
+      "Japan": "Japan",
+      "Netherlands": "Nederland",
+      "USA": "VS"
+    }
+  },
+  "login": {
+    "signInH": "AANMELDEN",
+    "signInBtn": "AANMELDEN",
+    "signUpH": "NIEUW BIJ VINYLXL?",
+    "signUpBtn": "ACCOUNT AANMAKEN",
+    "signInSoc": "Aanmelden met Social Network",
+    "signUpSoc": "Account aanmaken met Social Network",
+    "signInCustom": "Of e-mail",
+    "emailPc": "Email",
+    "passPc": "Password",
+    "repeatPassPc": "Herhaal je password",
+    "passRec": "Password vergeten?",
+    "rememberH": "Aangemeld blijven",
+    "rememberP": "Deel je de computer met anderen? Log dan uit als je klaar bent.",
+    "signupConfirmH": "WELKOM BIJ VINYLXL",
+    "loginConfirmH": "Welkom terug",
+    "mergeCartInfoMsg": "We zagen dat je eerder items had geselecteerd en hebben deze toegevoegd aan je mandje. Als dit niet is wat je wilt, verwijder ze dan.",
+    "signupConfirmP": "Bedankt voor het registreren! Je bent nu ingelogd.",
+    "signupEmailSent": "We hebben je een e-mail gestuurd. Volg alsjeblieft de instructies in the e-mail.",
+    "myAccountLink": "Mijn Account",
+    "logInLink": "Aanmelden",
+    "logOutLink": "Afmelden",
+    "MyAccount": "Mijn Account",
+    "AboveLogout": "Hallo,"
+  },
+  "restorePass": {
+    "header": "RESTORE PASSWORD",
+    "backToLogin": "Terug naar Login",
+    "button": "RESTORE",
+    "changedMsg": "Je password is gewijzigd."
+  },
+  "cart": {
+    "cartLink": "Winkelwagen",
+    "shoppingCartHeader": "WINKELWAGEN",
+    "goToCartH": "NAAR WINKELWAGEN",
+    "noItemsMsg": "Je winkelwagen is leeg",
+    "cartTotalHeader": "WINKELWAGEN TOTAAL",
+    "continueShoppingBtn": "VERDER WINKELEN",
+    "cartTableHeaders": {
+      "Products": "Producten",
+      "Price": "Prijs",
+      "Quantity": "Aantal",
+      "Total": "Totaal",
+      "removeBtnTitle": "Uit winkelwagen"
+    },
+    "cartTotal": {
+      "Subtotal": "Subtotaal:",
+      "Shipping": "Verzendkosten:",
+      "Discount": "Korting:",
+      "Total": "Totaal:",
+      "enterCoupon": "Geef hier je coupon code:",
+      "GotCoupon": "Heb je een coupon?",
+      "apply": "Toepassen",
+      "ProceedToCheckout": "NAAR CHECKOUT",
+      "ExpressCheckout": "EXPRESS CHECKOUT",
+      "ExpressCheckoutTip": "Checkout zonder aanloggen.",
+      "CancelCheckout": "ANNULEER CHECKOUT",
+      "GoToPayment": "NAAR BETALEN"
+    }
+  },
+  "productVideo": {
+    "videoH": "Video",
+    "noVideoMsg": "Geen videos gevonden."
+  },
+  "terms": {
+    "title": "Ik ga akkoord",
+    "link": "Leveringsvoorwaarden",
+    "closeModalBtn": "Ik heb het gelezen"
+  },
+  "address": {
+    "fnameInvalidInfo": "Voornaam is onjuist",
+    "prefixInvalidInfo": "Tussenvoegsel is onjuist",
+    "lnameInvalidInfo": "Achternaam is onjuist",
+    "countryInvalidInfo": "Land is onjuist",
+    "cityInvalidInfo": "Woonplaats is onjuist",
+    "houseNumberInvalidInfo": "Huisnummer is onjuist",
+    "postcodeInvalidInfo": "Postcode is onjuist",
+    "phoneInvalidInfo": "Telefoon is onjuist",
+    "addressInvalidInfo": "Straat is onjuist",
+    "emailInvalidInfo": "E-mail is onjuist",
+    "passwordInvalidInfo": "Het password is onjuist",
+    "mr": "Dhr.",
+    "mrs": "Mevr.",
+    "requiredAndNoNumbersField": "Dit veld mag niet leeg zijn en kan geen cijfers bevatten.",
+    "requiredFiled": "Dit veld mag niet leeg zijn.",
+    "fnameInvalid": "Vul je voornaam in.",
+    "lnameInvalid": "Vul je achternaam in.",
+    "postcodeInvalid": "Vul je postcode in.",
+    "houseNumberInvalid": "Vul je huisnummer in.",
+    "streetInvalid": "Vul je straat in.",
+    "cityInvalid": "Vul je woonplaats in.",
+    "phoneInvalid": "Vul je telefoonnummer in.",
+    "emailInvalid": "Vul je e-mail in.",
+    "fieldsInvalid": "Vul alle velden in."
+  },
+  "checkout": {
+    "detailsHeader": "CHECKOUT DETAILS",
+    "Details": "Details",
+    "ShippingInfo": "Verzending",
+    "Payment": "Betaling",
+    "GoBackBtn": "Terug",
+    "Confirmation": "Bevestiging",
+    "addressForm": {
+      "salutation": "Aanhef",
+      "first_name": "Voornaam",
+      "prefix": "Tussenvoegsel",
+      "first_namePh": "Je voornaam",
+      "last_name": "Achternaam",
+      "last_namePh": "Je achternaam",
+      "house": "No.",
+      "Country": "Land",
+      "City": "Woonplaats",
+      "CityPh": "Voor hier je plaatsnaam in",
+      "State": "Provincie",
+      "postal_code": "Postcode",
+      "postal_codePh": "Voer alsjeblieft een geldige postcode",
+      "Address": "Straat",
+      "AddressPh": "Je straatnaam",
+      "email": "E-mail adres",
+      "phone": "Telefoon",
+      "autoSignUp": "Ik wil graag nieuwsbrieven van VinylXL ontvangen.",
+      "regularInfo": "Als je je account aanmaakt, ga je akkoord met",
+      "regularLink1": "de voorwaarden van VinylXL",
+      "regularLink2": "en",
+      "regularLink3": "de privacy policy"
+    },
+    "countries": {
+      "NL": "Nederland",
+      "BE": "België",
+      "DE": "Duitsland",
+      "placeholder": "Selecteer je land"
+    },
+    "InvoiceAddress": "Factuur adres",
+    "ShipToInvoiceAddress": "Verzenden naar mijn factuur adres",
+    "ShipToDifferentAddress": "Verzenden naar een ander adres",
+    "updateInfoMsg": "Je kunt je factuur adres wijzigen in",
+    "AccountDetailsLink": "Account details"
+  },
+  "paymentPage": {
+    "title": "OVERZICHT & BETALING",
+    "PlaceOrder": "BESTELLING PLAATSEN",
+    "successMsg": "Je betaling is gelukt",
+    "cancelled": "De betaling is afgebroken",
+    "expired": "De betaling is verlopen",
+    "paymentInfo": "BETALINGS METHODE"
+  },
+  "signUp": {
+    "title": "VOOR EXCLUSIEVE AANBIEDINGEN EN NIEUWS",
+    "btn": "AANMELDEN"
+  },
+  "footer": {
+    "contactUs": "CONTACT OPNEMEN",
+    "emailPlaceholder": "Je e-mail",
+    "sendTitle": "BERICHT VERSTUREN",
+    "About": "VINYLXL",
+    "AboutStr": "VinylXL Nederland<br/>Het Bergje 6<br/>7313 GS Apeldoorn <br/> Kvk 08136371 <br/> BTW 14.65.19.358.B02",
+    "Contact": "CONTACT",
+    "ContactStr": "<a href='mailto:service@vinylxl.nl'>service@vinylxl.nl</a><br/>Tel. 085 002 05 55<br/>Mob. 06 39 83 70 59",
+    "copyrightInfo": "&copy; 2015 VinylXL. All Rights Reserved NL",
+    "Ordering": "BESTELLEN",
+    "Payment": "BETALEN",
+    "Returns": "RETOUREN",
+    "General": "ALGEMEEN",
+    "Cookies": "Privacy & Cookies",
+    "Disclaimer": "Voorbehoud",
+    "Terms": "Voorwaarden"
+  },
+  "productPage": {
+    "ShareLink": "Delen:",
+    "noProducts": "Niets gevonden",
+    "noProductDescr": "Nog geen product beschrijving",
+    "addToCart": "In winkelwagen",
+    "similarProducts": "Andere klanten die dit album kochten, vinden deze producten ook interessant:",
+    "tracklist": "Tracklist",
+    "productDetails": "Product Detail",
+    "DescriptionTab": "Beschrijving",
+    "DetailsTab": "Specificatie",
+    "ArtistsTab": "Artiesten",
+    "ExtraArtists": "Extra Artiesten",
+    "ExtraInfoH": "Extra info",
+    "ClsTab": "Klassiek",
+    "NotesH": "Notities"
+  },
+  "order": {
+    "Status": "Status",
+    "CreatedOn": "Aangemaakt op",
+    "CoverImage": "Cover Image"
+  },
+  "clsTab": {
+    "instruments": "Instrumenten",
+    "conductor": "Dirigent",
+    "genre": "Genre",
+    "longtitle": "Titel",
+    "orchestra": "Orkest",
+    "soloists": "Solisten"
+  },
+  "pagination": {
+    "prev": "Vorige",
+    "next": "Volgende"
+  },
+  "genres": {
+    "BLU": "Blues",
+    "BRA": "Brasil",
+    "CLS": "Klassieke muziek",
+    "COU": "Country",
+    "DAN": "Dance",
+    "JAZ": "Jazz",
+    "POP": "Pop",
+    "ROC": "Rock",
+    "VAR": "Diversen",
+    "WOR": "World",
+    "M_A": "Metal Alternative"
+  },
+  "releases": {
+    "new": "Nieuw",
+    "expected": "Verwacht",
+    "midPrice": "Midprice Selectie"
+  },
+  "wishlist": {
+    "title": "WISHLIST",
+    "edit": "Bewerk wishlist",
+    "done": "Done!",
+    "noitems": "Je wishlist is leeg",
+    "add": "Toevoegen aan wishlist",
+    "remove": "Verwijder uit wishlist"
+  }
+}

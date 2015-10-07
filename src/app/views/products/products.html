@@ -1,0 +1,36 @@
+<div class="products grey-container">
+
+    <div class="container">
+
+        <h1 ng-if="title">{{title}}</h1>
+
+        <white-box>
+
+            <products-filter
+                    class=""
+                    sort-model="vm.sort"
+                    items-per-page-model="vm.itemsPerPage"
+                    update-method="onFilterUpdate()">
+            </products-filter>
+
+            <div class="search-result">
+                <div ng-if="!products.length" class="well">{{'productPage.noProducts' | translate}}</div>
+                <div ng-repeat="product in products" ng-if="$index < vm.itemsPerPage">
+                    <product-preview model="product"></product-preview>
+                </div>
+            </div>
+
+            <nav class="text-center" ng-if="productsLength > vm.itemsPerPage">
+                <pagination total-items="productsLength"
+                            ng-model="currentPageInPager"
+                            ng-change="goToPage(currentPageInPager)"
+                            items-per-page="vm.itemsPerPage"
+                            max-size="maxPagesNumber"
+                            class="pagination"
+                            rotate="false"
+                            boundary-links="true"></pagination>
+            </nav>
+        </white-box>
+
+    </div>
+</div>

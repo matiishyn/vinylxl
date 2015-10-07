@@ -1,0 +1,98 @@
+<div class="grey-container checkout-details">
+    <div class="container">
+
+        <!--Multi-step indicator-->
+        <div class="row">
+            <div class="col-md-8">
+                <multistep-indicator current-step="2"></multistep-indicator>
+                <br/>
+            </div>
+        </div>
+
+        <div ng-form name="checkoutForm" class="row">
+            <div class="col-md-8 shopping-cart-section">
+                <h1 class="pull-left">{{'checkout.detailsHeader' | translate}}</h1>
+
+                <div class="pull-right">
+                    <button type="button" class="btn btn-info btn-block" ui-sref="home.cart">
+                        {{'checkout.GoBackBtn' | translate}}
+                    </button>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <white-box>
+                    <!-- USER IS NOT LOGGED IN -->
+                    <address-form ng-if="!token" model="shippingAddress" with-email="true"
+                                  show-validation="checkoutForm.showValidation"></address-form>
+
+                    <!-- USER IS LOGGED IN -->
+                    <div ng-if="token" class="shipping-billing-address">
+                        <div class="row radio-selection">
+
+                            <div class="col-sm-6">
+                                <input type="radio"
+                                       name="selectedInvoiceAddress"
+                                       id="inlineRadioOptions1"
+                                       value="invoice"
+                                       ng-model="model.selectedInvoiceAddress">
+                                <label for="inlineRadioOptions1">
+                                    {{'checkout.ShipToInvoiceAddress' | translate}}
+                                </label>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <input type="radio"
+                                       name="selectedInvoiceAddress"
+                                       id="inlineRadioOptions2"
+                                       value="new"
+                                       ng-model="model.selectedInvoiceAddress">
+                                <label for="inlineRadioOptions2">
+                                    {{'checkout.ShipToDifferentAddress' | translate}}
+                                </label>
+                            </div>
+
+                        </div>
+
+                        <hr class="hr-bold"/>
+
+                        <div ng-show="model.selectedInvoiceAddress === 'invoice'" class="animate address-switch">
+                            <h2 class="bold">{{'checkout.InvoiceAddress' | translate}}</h2>
+
+                            <invoice-address address="userAddress.billing_address"></invoice-address>
+
+                            <span class="help-block success">
+                                {{'checkout.updateInfoMsg' | translate}}
+                                <a href="#" ng-click="openAccountDetailsModal()">
+                                    {{'checkout.AccountDetailsLink' | translate}}
+                                </a>
+                            </span>
+                        </div>
+
+                        <div ng-show="model.selectedInvoiceAddress === 'new'" class="animate address-switch">
+                            <address-form model="shippingAddress" show-validation="checkoutForm.showValidation"></address-form>
+                        </div>
+
+                    </div>
+                </white-box>
+
+            </div>
+
+            <div class="col-md-4 cart-total-section">
+                <h2>{{'cart.cartTotalHeader' | translate}}</h2>
+
+                <white-box>
+                    <cart-total-table></cart-total-table>
+
+                    <coupon-discount model="model.couponeCode"></coupon-discount>
+
+                    <button ng-click="saveAddressAndGoToPayment(checkoutForm)"
+                            type="submit" class="btn btn-success btn-block proceed-btn">
+                        {{'cart.cartTotal.GoToPayment' | translate}}
+                    </button>
+                </white-box>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="pull-left img-preview">
+    <div class="image-space"></div>
+    <a class="overlay-window-link" fallback-image
+       ng-href="{{imgPreview.CommonMethods.getCoverImg(imgPreview.product.product_id, 'xlarge', imgPreview.activeImg)}}"
+       data-lightbox="{{imgPreview.activeImg}}">
+
+        <figure class="image-with-figcaption">
+
+            <img fallback-image class="large-image xl-img"
+                 ng-src="{{imgPreview.CommonMethods.getCoverImg(imgPreview.product.product_id, 'large', imgPreview.activeImg)}}"
+                 alt="{{imgPreview.product.title}}"/>
+            <figcaption><span class="glyphicon glyphicon-search" aria-hidden="true"></span></figcaption>
+        </figure>
+
+
+    </a>
+
+    <div class="preview-images-list" ng-if="imgPreview.images.length > 1">
+        <ul class="list-inline preview-images js-slick-slider">
+
+            <li ng-repeat="image in imgPreview.images">
+                <a href="">
+                    <img class="large-image"
+                         ng-class="{'inactive-preview': imgPreview.activeImg !== $index}"
+                         ng-click="imgPreview.activeImg = $index"
+                         ng-src="{{image.links.m}}"/>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</div>

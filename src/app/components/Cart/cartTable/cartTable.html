@@ -1,0 +1,56 @@
+<table class="table table-hover cart-table">
+    <thead>
+    <tr>
+        <th>{{'cart.cartTableHeaders.Products' | translate}}</th>
+        <th>{{'cart.cartTableHeaders.Price' | translate}}</th>
+        <th>{{'cart.cartTableHeaders.Quantity' | translate}}</th>
+        <th>{{'cart.cartTableHeaders.Total' | translate}}</th>
+        <th ng-if="!cartTable.readonly"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="product in cartTable.cart.products track by $index">
+        <td class="cart-product-info">
+
+            <div class="media">
+                <div class="media-left media-middle">
+                    <a href="#" ui-sref="home.product({id: product._id, title:product.title})">
+                        <img fallback-image ng-src="{{cartTable.commonMethods.getCoverImg(product.product_id, 'medium', '1')}}"
+                             alt="{{::product.title}}"
+                             class="media-object"/>
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">{{product.title}}</h4>
+                    <p>{{cartTable.commonMethods.getArtists(product.artists)}}</p>
+                </div>
+            </div>
+
+        </td>
+        <td>{{(product.special_price || product.retail_price) | retailPrice | currency:'&#8364;' | euroCurrency}}</td>
+        <td>
+            <quantity-incr ng-if="!cartTable.readonly" product="cartTable.cart.products[$index]"></quantity-incr>
+            <span ng-if="cartTable.readonly">{{product.quantity}}</span>
+        </td>
+        <td>{{product.retail_price * product.quantity | retailPrice | currency:'&#8364;' | euroCurrency}}</td>
+        <td class="options" ng-if="!cartTable.readonly">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"
+                  ng-click="cartTable.cart.removeProduct(product)"
+                  tooltip="{{'cart.cartTableHeaders.removeBtnTitle' | translate}}"></span>
+        </td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+            <span class="price">
+                {{cartTable.cart.subtotal | retailPrice | currency:'&#8364;' | euroCurrency}}
+            </span>
+        </td>
+        <td ng-if="!cartTable.readonly"></td>
+    </tr>
+    </tfoot>
+</table>

@@ -1,0 +1,59 @@
+@sign-up-height: 78px;
+
+.sign-up {
+  min-height: @sign-up-height;
+  background-color: @bg-red;
+  color: #fff;
+
+  border-top: 1px solid #fff;
+
+  .container {
+    line-height: 78px;
+  }
+
+  .sign-up-title {
+    white-space: nowrap;
+  }
+
+  form {
+    width: 100%;
+
+    .form-group {
+      display: flex;
+      align-items: center;
+      min-height: @sign-up-height;
+
+      input {
+        flex: 1;
+      }
+
+      button {
+        height: 32px;
+        color: #fff;
+        background-color: @bg-btn-red;
+        border: 0;
+        padding: 0 36px;
+        margin-left: 13px;
+
+        &:hover {
+          .btn-hover();
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+// Responsive
+@media (max-width: @full-supported-width) {
+  .sign-up {
+    .container {
+      line-height: 35px;
+      form {
+        .form-group {
+          min-height: inherit;
+        }
+      }
+    }
+  }
+}

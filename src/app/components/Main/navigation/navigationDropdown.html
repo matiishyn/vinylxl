@@ -1,0 +1,25 @@
+<ul class="dropdown-menu">
+    <li ng-repeat="item in dropdown.items" ng-if="item.freq !== 0">
+        <a href="#" class="menu-row" ng-click="dropdown.goToMenuPage($event, item)">
+            <span class="menu-label" ng-if="!dropdown.translateTitle">
+                {{item.descr || item.style || item.title}}
+            </span>
+            <span class="menu-label" ng-if="dropdown.translateTitle">
+                {{'genres.' + item.key | translate}}
+            </span>
+            <span class="menu-count">
+                <small>{{item.freq}}</small>
+            </span>
+        </a>
+    </li>
+    <li ng-if="!dropdown.disableMore">
+        &nbsp;
+    </li>
+    <li ng-if="!dropdown.disableMore">
+        <a href="#" class="menu-row" ng-click="dropdown.openModal($event)">
+            <span class="menu-label">
+                {{dropdown.moreTitle}}
+            </span>
+        </a>
+    </li>
+</ul>

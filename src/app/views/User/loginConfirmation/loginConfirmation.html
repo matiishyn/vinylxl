@@ -1,0 +1,35 @@
+<div class="grey-container login-confirmation">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <white-box class="text-center">
+                    <h1>{{'login.loginConfirmH' | translate}}{{getUserName()}}!</h1>
+                    <p>
+                        <redirect-timer
+                                ng-if="!cartIsChanged"
+                                redirect-state="redirectState"
+                                disabled="redirectTimerDisabled"
+                                redirect-title="redirectTitle">
+                        </redirect-timer>
+                    </p>
+
+                    <p ng-if="cartIsChanged">
+                        {{'login.mergeCartInfoMsg' | translate}}
+                        <small-cart-table class="col-sm-6 col-sm-offset-3 "></small-cart-table>
+                        <div class="clearfix"></div>
+                        <div ng-if="redirectTitle" class="text-center">
+                            <button class="btn btn-primary" ui-sref="{{redirectState}}">
+                                {{redirectTitle}}
+                            </button>
+                        </div>
+                    </p>
+                </white-box>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

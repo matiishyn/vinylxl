@@ -1,0 +1,8 @@
+<div class="row category text-center">
+    <h1 class="title" ng-click="category.goToProducts()">{{category.model.descr}}</h1>
+    <div class="flex-container">
+        <product-preview ng-repeat="product in category.products track by product._id"
+                         model="product">
+        </product-preview>
+    </div>
+</div>

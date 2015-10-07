@@ -1,0 +1,67 @@
+.promo-carousel {
+  background-color: @page-bg-grey;
+  margin-bottom: 10px;
+
+  .flexslider {
+    background-color: inherit;
+    border: none;
+    margin: 0;
+
+    .slides {
+      li {
+        text-align: center;
+        img {
+          display: inline-block;
+          width: auto;
+        }
+      }
+
+    }
+    .flex-direction-nav {
+      a {
+        height: 45px;
+
+        &:before {
+          font-family: FontAwesome;
+        }
+      }
+      a.flex-next:before {
+        content: "\f054";
+      }
+      a.flex-prev:before {
+        content: "\f053";
+      }
+    }
+    .flex-control-nav {
+      bottom: 0;
+    }
+  }
+
+  .slide {
+    position: relative;
+
+    .container {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      h1 {
+        font-family: 'Myriad Pro', Verdana, Arial, Helvetica, sans-serif;
+        font-size: 70px;
+        color: #f2f2f2;
+        text-shadow: 1px 1px 0 #CCC, 2px 2px 0 #CCC, 3px 3px 0 #444, 4px 4px 0 #444, 5px 5px 0 #444, 6px 6px 0 #444, /* The Blur - optional */ 5px 5px 15px #999;
+        transition: all 0.12s ease-out;
+      }
+
+      button {
+        font-size: 36px;
+        margin-top: 35px;
+        background-color: transparent;
+        border: 5px solid #fff;
+        color: #fff;
+        padding: 15px 35px;
+      }
+    }
+  }
+}

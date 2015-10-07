@@ -1,0 +1,11 @@
+<div class="coupon-discount">
+    <p class="price">{{'cart.cartTotal.GotCoupon' | translate}}</p>
+    <form class="form-inline">
+        <div class="form-group">
+            <input type="text"
+                   ng-model="couponDiscount.model"
+                   class="form-control" placeholder="{{'cart.cartTotal.enterCoupon' | translate}}">
+            <button type="submit" class="btn btn-info pull-right" ng-click="couponDiscount.applyCoupon(couponDiscount.model)">{{'cart.cartTotal.apply' | translate}}</button>
+        </div>
+    </form>
+</div>

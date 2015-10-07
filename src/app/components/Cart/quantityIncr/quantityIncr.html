@@ -1,0 +1,25 @@
+<div class="quantity-incr">
+    <label class="sr-only">Quantity</label>
+
+    <div ng-form name="quantity" class="input-group product-quantity">
+
+        <span class="input-group-btn left-arrow">
+            <button ng-click="quantityIncr.decrementQuantity()"
+                    class="btn btn-default" type="button">-
+            </button>
+        </span>
+
+        <input type="number" class="form-control"
+               required
+               min="1"
+               ng-model="quantityIncr.inputModel"
+               ng-model-options="{ debounce: 300 }">
+
+        <span class="input-group-btn right-arrow">
+            <button ng-click="quantityIncr.incrementQuantity()"
+                    class="btn btn-default" type="button">+
+            </button>
+        </span>
+
+    </div>
+</div>

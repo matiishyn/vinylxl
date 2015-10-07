@@ -1,0 +1,19 @@
+<div class="modal-header">
+    <h3 class="modal-title">{{'modal.personalInfoH' | translate}}</h3>
+
+    <div class="close-modal-x" ng-click="cancel()">
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+    </div>
+</div>
+<div class="modal-body">
+
+    <ng-form name="updateAddressForm">
+        <address-form model="address"></address-form>
+    </ng-form>
+
+
+</div>
+<div class="modal-footer text-center">
+    <button class="btn btn-info" ng-click="cancel()">{{'modal.cancelBtn' | translate}}</button>
+    <button class="btn btn-success" ng-click="ok()">{{'modal.saveBtn' | translate}}</button>
+</div>

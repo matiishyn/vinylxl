@@ -1,0 +1,36 @@
+<div class="payment-methods">
+
+    <ng-form name="paymentMethodsForm" ng-init="sublist">
+
+        <!--Country specific methods -->
+        <div class="form-group payment-methods-group" >
+
+
+            <div class="radio-inline" ng-repeat="option in paymentMethodsCtrl.paymentOptions">
+                <label ng-class="{'selected': paymentMethodsCtrl.paymentService.chosenPaymentMethod.paymentOptionId === option.id}">
+
+                    <input type="radio" name="paymentOption" id="" ng-value="option.id"
+                           ng-change="paymentMethodsCtrl.selectFirstSubOption()"
+                           ng-model="paymentMethodsCtrl.paymentService.chosenPaymentMethod.paymentOptionId">
+
+
+                    <img ng-src="assets/ui/payment_{{option.id}}.png" alt=""/>
+
+
+                </label>
+            </div>
+
+        </div>
+
+        <!--Sublist-->
+        <div class="form-group">
+            <select ng-show="paymentMethodsCtrl.getSubOptionsNumber()"
+                    class="form-control"
+                    ng-options="opt.id as opt.visibleName for opt in paymentMethodsCtrl.getSubOptionsList()"
+                    ng-model="paymentMethodsCtrl.paymentService.chosenPaymentMethod.paymentOptionSubId">
+            </select>
+        </div>
+
+
+    </ng-form>
+</div>

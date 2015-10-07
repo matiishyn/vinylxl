@@ -1,0 +1,9 @@
+<div class="specials container text-center">
+    <toggle title="specials.current.title"
+            previous="specials.previous()"
+            next="specials.next()"></toggle>
+    <category model="specials.current"
+              products="specials.current.products.randomLimit"
+              ng-model-options="{ debounce: 0 }"
+              go-to-products="specials.goToProducts()"></category>
+</div>

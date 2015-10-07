@@ -1,0 +1,57 @@
+// some styles are taken from Cart page from '.cart-view'
+.checkout-details {
+  hr {
+    border-top: 3px solid @hr-bold-grey;
+  }
+
+  .cart-total-section {
+    .cancel-checkout-btn {
+      padding: 15px 30px;
+
+      button {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .shipping-billing-address {
+    .radio-selection {
+      label {
+        cursor: pointer;
+      }
+      input:checked + label {
+        color: @vinyl-red;
+      }
+    }
+  }
+
+  .white-box {
+    position: relative;
+
+    .address-switch {
+      //position: absolute;
+    }
+  }
+
+}
+
+// animate ngIf
+
+/* when hiding the picture */
+.animate.ng-hide-add {
+  animation: 0.5s lightSpeedOut ease;
+}
+
+/* when showing the picture */
+.animate.ng-hide-remove {
+  animation: 0.5s flipInX ease;
+}
+
+.animate.ng-hide-add-active {
+  position: absolute;
+  top: 85px;
+}
+
+
+
+

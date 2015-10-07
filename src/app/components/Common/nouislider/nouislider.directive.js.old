@@ -1,0 +1,66 @@
+// http://refreshless.com/nouislider/
+(function (module) {
+    'use strict';
+
+    module.directive('nouislider', function () {
+        return {
+            templateUrl: 'app/components/nouislider/nouislider.html',
+            restrict: 'E',
+            replace: true,
+            scope: {
+                from: '=',
+                to: '='
+            },
+            bindToController: true,
+            controllerAs: 'slCtrl',
+            controller: function () {
+                var vm = this;
+
+                var sliderElement = document.getElementById('nouislider');
+                noUiSlider.create(sliderElement, {
+                    start: [1970, 2020],
+                    connect: true,
+                    range: {
+                        'min': 1970,
+                        'max': 2020
+                    },
+                    step: 1/**,
+                     pips: {
+                        mode: 'values',
+                        values: [20, 80],
+                        density: 4
+                    }*/
+                });
+
+                var tipHandles = document.getElementById('nouislider').getElementsByClassName('noUi-handle'),
+                    tooltips = [];
+
+                // Add divs to the slider handles.
+                for (var i = 0; i < tipHandles.length; i++) {
+                    tooltips[i] = document.createElement('div');
+                    tipHandles[i].appendChild(tooltips[i]);
+                    tooltips[i].className += 'slider-tooltip';
+                    tooltips[i].innerHTML = '<span></span>';
+                    tooltips[i] = tooltips[i].getElementsByTagName('span')[0];
+                }
+
+                // When the slider changes, write the value to the tooltips.
+                document.getElementById('nouislider').noUiSlider.on('update', function (values, handle) {
+                    if (handle) {
+                        // to
+                        $('#nouislider-to')
+                            .val(values[handle])
+                            .trigger('input');
+                    } else {
+                        // from
+                        $('#nouislider-from')
+                            .val(values[handle])
+                            .trigger('input');
+                    }
+                    tooltips[handle].innerHTML = parseInt(values[handle]);
+                });
+            }
+        };
+    });
+
+})(angular.module('vx'));

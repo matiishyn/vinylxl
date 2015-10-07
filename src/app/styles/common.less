@@ -1,0 +1,122 @@
+.price {
+  color: @price-color;
+  font-weight: bold;
+  font-size: 16px;
+  &.crossed {
+    text-decoration: line-through;
+    color: inherit;
+  }
+}
+.special-price {
+  background-color: rgba(255,255,255,0.8);
+  box-shadow: 0 0 3px red;
+  padding: 3px;
+}
+
+.grey-container {
+  background-color: @page-bg-grey;
+
+  h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .container {
+    padding: 17px 0 67px;
+  }
+}
+
+html, body {
+  background-color: @page-bg-grey;
+  height: 100%; // for IE
+}
+
+.text-underline {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.flex-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.info-msg {
+  img {
+    vertical-align: bottom;
+    margin-right: 5px;
+  }
+}
+
+/*======== Sticky footer styles ======*/
+div.root-element {
+  min-width: 768px;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+main {
+  flex: 1;
+}
+
+.ie main {
+  flex: auto;
+}
+
+/* =================================== */
+
+hr.hr-bold {
+  border-top: 3px solid @hr-bold-grey;
+}
+
+// required field
+.form-group.required {
+  .control-label:after {
+    content: "*";
+    color: @bg-btn-red;
+  }
+}
+
+dl.table-like {
+  dt {
+    float: left;
+    min-width: 150px;
+  }
+  dd {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+  }
+}
+
+.help-block {
+  font-size: 13px;
+  &.success {
+    color: @brand-success;
+    &::before{
+      content: "\f06a";
+      .font-awesome-in-before();
+    }
+  }
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+}
+
+// Scroll to top Plugin
+#scrollUp {
+  bottom: 20px;
+  right: 20px;
+  width: 38px;
+  height: 38px;
+  font-family: FontAwesome;
+  font-size: 35px;
+  text-decoration: none;
+  &:before {
+    content: "\f139";
+  }
+}

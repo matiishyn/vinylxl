@@ -1,0 +1,35 @@
+<div class="">
+    <dl class="table-like">
+        <dt>{{'searchElement.labels.genre.descr' | translate}}</dt>
+        <dd>{{productDetails.product.genre.descr || '-'}}</dd>
+
+        <dt>{{'searchElement.labels.styles' | translate}}</dt>
+        <dd>{{productDetails.product.styles.join(', ') || '-'}}</dd>
+
+        <dt>{{'searchElement.labels.Label' | translate}}</dt>
+        <dd>{{productDetails.product.label.descr || '-'}}</dd>
+
+        <dt>{{'searchElement.labels.ProductNr' | translate}}</dt>
+        <dd>{{productDetails.product.product_id || '-'}}</dd>
+
+        <dt>{{'searchElement.labels.Format' | translate}}</dt>
+        <dd>{{productDetails.CommonMethods.getProductFormat(productDetails.product.media, productDetails.product.formats) || '-'}}</dd>
+
+        <dt>{{'searchElement.labels.CountryOrigin' | translate}}</dt>
+        <dd>{{productDetails.product.origin_id || '-'}}</dd>
+
+        <dt>{{'searchElement.labels.ReleaseDate' | translate}}</dt>
+        <dd>{{productDetails.product.release_date | releaseDate}}</dd>
+
+        <dt>{{'searchElement.labels.EAN' | translate}}</dt>
+        <dd>{{productDetails.product.eancode || '-'}}</dd>
+
+        <dt>{{'searchElement.labels.Delivery' | translate}}</dt>
+        <dd>{{productDetails.product.delivery.delivery_days | deliveryDays}}</dd>
+
+        <dt>{{'product.units' | translate}}</dt>
+        <dd>{{productDetails.product.units}}</dd>
+    </dl>
+
+
+</div>

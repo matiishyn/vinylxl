@@ -1,0 +1,65 @@
+.app-header {
+  min-height: 76px;
+  div.navbar {
+    margin-bottom: 0;
+    min-height: 76px;
+    height: inherit;
+    background: @color-light-grey;
+    border: none;
+
+    .container {
+      display: flex;
+      // LOGO
+      div.header-logo {
+        a {
+          padding-top: 13px;
+          display: inline-block;
+        }
+      }
+      .header-search {
+        flex: 1;
+        order: 1;
+        form {
+          padding-left: 25px;
+        }
+      }
+      // Links
+      .header-menu {
+        order: 2;
+        ul {
+          a {
+            line-height: 46px;
+            color: @font-color-base;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive
+@media (max-width: @screen-sm-max) {
+  .app-header {
+    div.navbar {
+      .container {
+        display: inherit;
+
+        div.header-logo {
+          float: left;
+        }
+        .header-menu{
+          float: right;
+          li{
+            display: inline-block;
+          }
+        }
+        .header-search {
+          clear: both;
+          .navbar-form {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}

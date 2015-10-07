@@ -1,0 +1,74 @@
+<div class="product-info">
+
+    <div class="images">
+        <img-preview product="productInfo.product"></img-preview>
+    </div>
+
+    <div class="product-descr">
+
+        <div class="row">
+            <div class="col-sm-6">
+                <h1>{{productInfo.product.title}}</h1>
+                <artist-link title="{{productInfo.getArtists()}}"></artist-link>
+            </div>
+
+            <div class="col-sm-6">
+                <span class="price" ng-class="{'crossed': productInfo.product.special_price}">
+                    {{productInfo.product.retail_price | retailPrice | currency:'&#8364;' | euroCurrency}}
+                </span>
+                <span ng-if="productInfo.product.special_price" class="special-price price pull-left">
+                {{::productInfo.product.special_price | retailPrice | currency:'&#8364;' | euroCurrency}}
+            </span>
+            </div>
+        </div>
+
+        <div>
+            <tabset>
+                <tab heading="{{'productPage.DescriptionTab' | translate}}">
+                    <p>{{productInfo.product.descr || ('productPage.noProductDescr' | translate)}}</p>
+
+                    <div ng-if="productInfo.product.extra_info[0]">
+                        <h4>{{'productPage.ExtraInfoH' | translate}}</h4>
+                        <p>{{productInfo.product.extra_info[0]}}</p>
+                    </div>
+
+                    <div ng-if="productInfo.product.notes">
+                        <h4>{{'productPage.NotesH' | translate}}</h4>
+                        <p>{{productInfo.product.notes}}</p>
+                    </div>
+
+                </tab>
+
+                <tab heading="{{'productPage.DetailsTab' | translate}}">
+                    <product-details product="productInfo.product"></product-details>
+                </tab>
+
+                <tab heading="{{'productPage.ArtistsTab' | translate}}">
+
+                    <div ng-if="productInfo.product.artists[0]">
+                        <h4>{{'searchElement.labels.artists.name' | translate}}</h4>
+                        <ul>
+                            <li ng-repeat="artist in productInfo.product.artists">
+                                <span>{{artist.name}}</span> <code ng-if="artist.role">{{artist.role}}</code>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div ng-if="productInfo.product.extra_artists[0]">
+                        <h4>{{'productPage.ExtraArtists' | translate}}</h4>
+                        <ol>
+                            <li ng-repeat="artist in productInfo.product.extra_artists">
+                                <span>{{artist.name}}</span> <code ng-if="artist.role">{{artist.role}}</code>
+                            </li>
+                        </ol>
+                    </div>
+                </tab>
+
+                <tab class="cls-tab" heading="{{'productPage.ClsTab' | translate}}" ng-if="productInfo.product.cls">
+                    <product-cls cls="productInfo.product.cls"></product-cls>
+                </tab>
+            </tabset>
+        </div>
+    </div>
+
+</div>

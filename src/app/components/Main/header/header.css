@@ -1,0 +1,16 @@
+.app-header {
+  min-height: 76px;
+}
+.app-header div.navbar {
+  margin-bottom: 0;
+  min-height: 76px;
+  height: inherit;
+  background: #FAFAFA;
+  border: none;
+}
+.app-header div.navbar div.nav-header a.nav-brand {
+  padding-top: 13px;
+}
+.app-header div.navbar ul.nav a {
+  line-height: 46px;
+}

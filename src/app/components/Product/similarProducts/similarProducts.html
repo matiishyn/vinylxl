@@ -1,0 +1,8 @@
+<div class="similar-products">
+    <h4>{{'productPage.similarProducts' | translate}}</h4>
+
+    <div class="similar-products-result">
+        <product-preview ng-repeat="product in similarProducts.products"
+                         model="product"></product-preview>
+    </div>
+</div>

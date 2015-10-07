@@ -1,0 +1,32 @@
+.products {
+  .container {
+    .product-preview {
+      animation: 0.5s flipInX ease;
+    }
+
+    .search-result {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+  }
+
+  // PAGINATION STYLING
+  .pagination {
+    a {
+      border: none;
+      color: @text-color;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 14px;
+      padding: 5px 8px;
+    }
+    .active {
+      a {
+        background-color: @vinyl-red;
+        color: #fff;
+      }
+    }
+  }
+}

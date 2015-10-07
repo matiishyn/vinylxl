@@ -1,0 +1,25 @@
+<div class="cart-link-container translate-dropdown">
+    <a class="cart-link dropdown-btn" href="#" id="cart-link">
+        <img class="flag-icon" src="assets/ui/{{tr.currentLang}}.png" alt=""/>
+    </a>
+
+    <div class="cart-dropdown dropdown-list">
+        <ul class="list-unstyled">
+            <li ng-if="tr.currentLang !== 'en'">
+                <a ng-click="tr.selectLanguage('en')" href="">
+                    <img class="flag-icon" src="assets/ui/en.png" alt=""/>
+                </a>
+            </li>
+            <!--<li ng-if="tr.currentLang !== 'de'">
+                <a ng-click="tr.selectLanguage('de')" href="">
+                    <img class="flag-icon" src="assets/ui/de.png" alt=""/>
+                </a>
+            </li>-->
+            <li ng-if="tr.currentLang !== 'nl'">
+                <a ng-click="tr.selectLanguage('nl')" href="">
+                    <img class="flag-icon" src="assets/ui/nl.png" alt=""/>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

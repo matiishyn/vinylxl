@@ -1,0 +1,40 @@
+<div class="track-list">
+
+    <h4>{{'productPage.tracklist' | translate}}</h4>
+
+    <div ng-if="!tracklist.tracks.length">
+        <p>{{'errorMsgs.noTracklist' | translate}}</p>
+    </div>
+
+    <div>
+        <section ng-repeat="album in tracklist.tracks" ng-init="page = $index + 1;"
+                 ng-show="page == tracklist.currentPage">
+            <ol>
+                <li ng-repeat="track in album.tracks">
+                    <span>
+                        {{::track.title}}
+                        <span ng-if="track.playtime">({{track.playtime}})</span>
+                    </span>
+
+                </li>
+            </ol>
+        </section>
+    </div>
+
+    <p ng-if="tracklist.tracks[1]">
+        <pagination total-items="tracklist.tracks.length"
+                    items-per-page="'1'"
+                    max-size="'5'"
+                    next-text=""
+                    previous-text=""
+                    ng-model="tracklist.currentPage"
+                    class="pagination-sm"
+                    rotate="false"
+                    boundary-links="true">
+        </pagination>
+    </p>
+
+
+
+
+</div>

@@ -1,0 +1,72 @@
+<div class="grey-container profile-view">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <white-box class="">
+
+
+                    <h1 class="text-center">{{'profile.title' | translate}}</h1>
+                    <hr class="hr-bold"/>
+
+                    <div class="row">
+                        <div class="col-sm-3" list-group-menu>
+
+                            <div class="list-group">
+                                <a href="#" class="list-group-item" ui-sref="home.profile">
+                                    {{'profile.menu.Overview' | translate}}
+                                </a>
+                                <a href="#" class="list-group-item" ui-sref="home.profile.personalInfo">
+                                    {{'profile.menu.PersonalInformation' | translate}}
+                                </a>
+                                <a href="#" class="list-group-item" ui-sref="home.profile.orderHistory">
+                                    {{'menu.OrderStatusHistory' | translate}}
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div ui-view>
+                            <div class="col-sm-9 my-account-overview">
+
+                                <h2 class="block">{{'profile.personalInfoH' | translate}}</h2>
+
+                                <div>
+                                    <dl class="table-like">
+                                        <dt>{{'profile.username' | translate}}</dt>
+                                        <dd>{{profile.billing_address.email || '-'}}</dd>
+                                        <dt>{{'profile.name' | translate}}</dt>
+                                        <dd>{{profile.billing_address.first_name}} {{profile.billing_address.last_name || '-'}}</dd>
+                                    </dl>
+                                </div>
+
+
+                                <h2 class="block">{{'profile.OrderSummaryH' | translate}}</h2>
+
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h3>{{'profile.menu.PendingOrders' | translate}}</h3>
+                                        <p>{{'profile.noPendingOrders' | translate}}</p>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <h3>{{'menu.OrderStatusHistory' | translate}}</h3>
+                                        <p>{{'profile.noHistory' | translate}}</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </white-box>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

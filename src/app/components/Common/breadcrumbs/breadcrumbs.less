@@ -1,0 +1,30 @@
+.breadcrumbs {
+  margin-bottom: 30px;
+
+  ul {
+    li {
+      display: inline-block;
+      margin-right: 9px;
+
+      &:nth-child(n + 2)::before {
+        content: '';
+        width: 6px;
+        height: 9px;
+        display: inline-block;
+        background-image: url("/assets/ui/breadscrumbs_divider.png");
+        margin-right: 6px;
+      }
+
+      &:last-child {
+
+        .breadcrumb-element {
+          font-weight: bold;
+        }
+      }
+
+      .breadcrumb-element {
+        color: @font-color-base;
+      }
+    }
+  }
+}

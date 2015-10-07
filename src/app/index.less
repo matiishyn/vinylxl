@@ -5,6 +5,22 @@
   padding: 0.2em 0;
 }
 
+@import 'vendor.less';
+
+body {
+  ::selection {
+    background: #ffb7b7;
+  }
+}
+
+a:focus, input:focus, button:focus, .btn:focus, .btn.active:focus {
+  outline: none;
+}
+
+// overwrite image for Select2
+.select2-search-choice-close {
+  background-image: url("/assets/ui/select2.png");
+}
 
 /* Do not remove this comments bellow. It's the markers used by gulp-inject to inject
    all your less files automatically */

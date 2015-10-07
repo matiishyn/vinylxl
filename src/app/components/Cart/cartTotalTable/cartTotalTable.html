@@ -1,0 +1,25 @@
+<table class="table table-hover cart-total-table">
+    <tbody>
+
+    <tr>
+        <td>{{'cart.cartTotal.Subtotal' | translate}}</td>
+        <td>{{cartTotalTable.cart.subtotal | retailPrice | currency:'&#8364;' | euroCurrency}}</td>
+    </tr>
+    <tr>
+        <td>{{'cart.cartTotal.Shipping' | translate}}</td>
+        <td>{{cartTotalTable.shipping || cartTotalTable.cart.shippingPrice | retailPrice | currency:'&#8364;' | euroCurrency}}</td>
+    </tr>
+    <tr>
+        <td>{{'cart.cartTotal.Discount' | translate}}</td>
+        <td>{{0 | retailPrice | currency:'&#8364;' | euroCurrency}}</td>
+    </tr>
+    <tr>
+        <td>{{'cart.cartTotal.Total' | translate}}</td>
+        <td>
+            <!--<span class="price">{{cartTotalTable.cart.shippingPrice + cartTotalTable.subtotalValue | retailPrice | currency:'&#8364;' | euroCurrency}}</span>-->
+            <span class="price">{{cartTotalTable.cart.total | retailPrice | currency:'&#8364;' | euroCurrency}}</span>
+        </td>
+    </tr>
+
+    </tbody>
+</table>

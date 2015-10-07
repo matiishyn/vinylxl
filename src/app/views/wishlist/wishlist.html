@@ -1,0 +1,41 @@
+<div class="grey-container wishlist">
+    <div class="container">
+
+        <div class="row" ng-if="!wishlist.products.length">
+            <div class="col-md-12">
+                <white-box class="text-center">
+                    <h4>{{'wishlist.noitems' | translate}}</h4>
+                </white-box>
+            </div>
+        </div>
+
+        <div class="row" ng-if="wishlist.products.length">
+            <white-box>
+                <div class="text-center">
+                    <h1>{{'wishlist.title' | translate}}</h1>
+
+                    <div class="edit-wishlist"
+                         ng-class="{'edit': !wishlist.editMode, 'done': wishlist.editMode}"
+                         type="button"
+                         ng-click="wishlist.toggleEditMode()"
+                         class="btn">
+                        <span ng-if="!wishlist.editMode"><i class="fa fa-pencil"></i> {{'wishlist.edit' | translate}}</span>
+                        <span ng-if="wishlist.editMode"><i class="fa fa-check"></i></i> {{'wishlist.done' | translate}}</span>
+                    </div>
+                </div>
+                <div class="products">
+                    <div dir-paginate="product in wishlist.products | itemsPerPage: 12">
+                        <product-preview model="product" editable="wishlist.editMode"></product-preview>
+                    </div>
+                </div>
+            </white-box>
+
+            <div class="row">
+                <div class="col-xs-offset-5">
+                    <dir-pagination-controls class="center-block"></dir-pagination-controls>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

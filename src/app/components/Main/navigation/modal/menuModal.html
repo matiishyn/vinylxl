@@ -1,0 +1,79 @@
+<div class="modal-header">
+    <h3 class="modal-title">{{title}}</h3>
+
+    <div class="close-modal-x" ng-click="cancel()">
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+    </div>
+</div>
+<div class="modal-body">
+
+    <!--Search and Sorting-->
+    <div class="search-menu row" input-effect>
+        <div class="search-form">
+            <span class="input input--manami">
+                <input class="input__field input__field--manami"
+                       ng-model="searchQuery"
+                       ng-model-options="{ debounce: 400 }"
+                       type="search"
+                       id="input-32"/>
+                <i ng-show="searchQuery"
+                   tooltip="{{'menu.resetSearchTooltip' | translate}}"
+                   ng-click="resetSearch()"
+                   tooltip-append-to-body="true" class="fa fa-times reset-search"></i>
+                <label class="input__label input__label--manami" for="input-32">
+                    <span class="input__label-content input__label-content--manami">{{'menu.searchLabel' | translate}}</span>
+                </label>
+            </span>
+        </div>
+
+        <div class="sorting">
+            <div class="btn-group" role="group">
+                <button ng-click="sortAz()"
+                        type="button"
+                        ng-class="{'active': sorting === 'd:1'}"
+                        tooltip="{{'tooltips.sortingAz' | translate}}"
+                        class="btn btn-default">
+                    <i class="fa fa-sort-alpha-asc"></i>
+                </button>
+                <button ng-click="sortFreq()"
+                        ng-class="{'active': sorting === 'f:-1'}"
+                        type="button"
+                        tooltip="{{'tooltips.sortingFreq' | translate}}"
+                        class="btn btn-default">
+                    <i class="fa fa-sort-amount-desc"></i>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <!--Result-->
+    <ul class="list-unstyled menu-items">
+        <li ng-repeat="item in items" ng-if="$index < pageNumber">
+            <a href="#" class="menu-row" ng-click="goToMenuPage(item)">
+                <span class="menu-label">
+                    {{item.descr || item.style}}
+                </span>
+                <span class="menu-count">
+                    <small>{{item.freq}}</small>
+                </span>
+            </a>
+        </li>
+    </ul>
+
+    <!--Paging-->
+    <ul class="pager">
+        <li class="previous" ng-class="{'disabled': currentPage === 0}">
+            <a href="#" ng-click="prevPage()">
+                <span aria-hidden="true"><i class="fa fa-chevron-left"></i></span> {{'pagination.prev' | translate}}
+            </a>
+        </li>
+
+        <li class="next" ng-class="{'disabled': items.length <= pageNumber}">
+            <a href="#" ng-click="nextPage()">
+                {{'pagination.next' | translate}} <span aria-hidden="true"><i class="fa fa-chevron-right"></i></span>
+            </a>
+        </li>
+    </ul>
+
+</div>

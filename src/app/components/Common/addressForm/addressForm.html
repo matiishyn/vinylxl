@@ -1,0 +1,259 @@
+<div class="address-container">
+
+    <ng-form name="addressForm">
+
+        <div class="alert alert-warning form-invalid-messages" role="alert" id="" ng-if="adr.isErrorBoxVisible(addressForm)">
+            <div class="pull-left">
+                <img src="assets/ui/form_invalid.png" alt="Form invalid form"/>
+            </div>
+
+            <div class="pull-left">
+                <ul>
+                    <li ng-if="adr.isErrorVisible(addressForm.first_name)">{{'address.fnameInvalidInfo' | translate}}</li>
+                    <li ng-if="adr.isErrorVisible(addressForm.prefix)">{{'address.prefixInvalidInfo' | translate}}</li>
+                    <li ng-if="adr.isErrorVisible(addressForm.last_name)">{{'address.lnameInvalidInfo' | translate}}</li>
+                    <li ng-if="adr.isErrorVisible(addressForm.country)">{{'address.countryInvalidInfo' | translate}}</li>
+                    <li ng-if="adr.isErrorVisible(addressForm.city)">{{'address.cityInvalidInfo' | translate}}</li>
+                    <li ng-if="adr.isErrorVisible(addressForm.house)">{{'address.houseNumberInvalidInfo' | translate}}</li>
+                    <li ng-if="adr.isErrorVisible(addressForm.postal_code)">{{'address.postcodeInvalidInfo' | translate}}</li>
+                    <li ng-if="adr.isErrorVisible(addressForm.phone)">{{'address.phoneInvalidInfo' | translate}}</li>
+                    <li ng-if="adr.isErrorVisible(addressForm.address)">{{'address.addressInvalidInfo' | translate}}</li>
+                    <li ng-if="adr.isErrorVisible(addressForm.email)">{{'address.emailInvalidInfo' | translate}}</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Title -->
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group">
+                    <label class="control-label">
+                        {{'checkout.addressForm.salutation' | translate}}
+                    </label>
+                    <br/>
+
+                    <label class="radio-inline">
+                        <input type="radio"
+                               ng-model="adr.model.salutation"
+                               name="inlineRadioOptions" id="inlineRadio1" value="Mr.">{{'address.mr' | translate}}
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio"
+                               ng-model="adr.model.salutation"
+                               name="inlineRadioOptions" id="inlineRadio2" value="Mrs.">{{'address.mrs' | translate}}
+                    </label>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Firstname and Prefix-->
+        <div class="row">
+
+            <div class="col-sm-7">
+                <div class="form-group required has-feedback"
+                     ng-class="{'has-error': adr.isErrorVisible(addressForm.first_name)}">
+                    <label class="control-label" for="first_name">{{'checkout.addressForm.first_name' | translate}}</label>
+                    <input class="form-control" id="first_name"
+                           required
+                           pattern="{{adr.az}}"
+                           name="first_name"
+                           ng-model="adr.model.first_name"
+                           placeholder="{{'checkout.addressForm.first_namePh' | translate}}">
+                    <span ng-if="adr.isErrorVisible(addressForm.first_name)"
+                          class="glyphicon glyphicon-exclamation-sign form-control-feedback" aria-hidden="true"></span>
+                    <span ng-if="adr.isErrorVisible(addressForm.first_name)" class="help-block">
+                        {{'address.fnameInvalid' | translate}}
+                        {{'address.requiredAndNoNumbersField' | translate}}
+                    </span>
+                </div>
+            </div>
+
+            <div class="col-sm-5">
+                <div class="form-group"
+                     ng-class="{'has-error': adr.isErrorVisible(addressForm.prefix)}">
+                    <label class="control-label" for="prefix">{{'checkout.addressForm.prefix' | translate}}</label>
+                    <input class="form-control" id="prefix"
+                           name="prefix"
+                           pattern="{{adr.az}}"
+                           minlength="2"
+                           ng-model="adr.model.prefix"
+                           placeholder="">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Lastname -->
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group required has-feedback"
+                     ng-class="{'has-error': adr.isErrorVisible(addressForm.last_name)}">
+                    <label class="control-label" for="last_name">{{'checkout.addressForm.last_name' |
+                        translate}}</label>
+                    <input class="form-control" id="last_name"
+                           name="last_name" required
+                           minlength="2"
+                           pattern="{{adr.az}}"
+                           ng-model="adr.model.last_name"
+                           placeholder="{{'checkout.addressForm.last_namePh' | translate}}">
+                    <span ng-if="adr.isErrorVisible(addressForm.last_name)"
+                          class="glyphicon glyphicon-exclamation-sign form-control-feedback" aria-hidden="true"></span>
+                    <span ng-if="adr.isErrorVisible(addressForm.last_name)" class="help-block">
+                        {{'address.lnameInvalid' | translate}}
+                        {{'address.requiredAndNoNumbersField' | translate}}
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!--Country-->
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="form-group"
+                     ng-class="{'has-error': adr.isErrorVisible(addressForm.country)}">
+                    <label class="control-label" for="Country">{{'checkout.addressForm.Country' | translate}}</label>
+                    <select class="form-control" required
+                            name="country" id="Country" ng-model="adr.model.country">
+                        <option value="NL">{{'checkout.countries.NL' | translate}}</option>
+                        <option value="BE">{{'checkout.countries.BE' | translate}}</option>
+                        <option value="DE">{{'checkout.countries.DE' | translate}}</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!--Postcode and No.-->
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="form-group required has-feedback"
+                     ng-class="{'has-error': adr.isErrorVisible(addressForm.postal_code)}">
+                    <label class="control-label" for="postal_code">{{'checkout.addressForm.postal_code' |
+                        translate}}</label>
+                    <input class="form-control"
+                           name="postal_code" required
+                           ng-autocomplete
+                           options="{types: 'geocode',country: adr.model.country}"
+                           details="adr.postal_codeAutocompleteDetails"
+                           ng-model="adr.model.postal_code"
+                           ng-model-options="{ debounce: 500 }"
+                           placeholder="{{'checkout.addressForm.postal_codePh' | translate}}"
+                           id="postal_code">
+                    <span ng-if="adr.isErrorVisible(addressForm.postal_code)"
+                          class="glyphicon glyphicon-exclamation-sign form-control-feedback" aria-hidden="true"></span>
+                    <span ng-if="adr.isErrorVisible(addressForm.postal_code)" class="help-block">
+                        {{'address.postcodeInvalid' | translate}}
+                        {{'address.requiredFiled' | translate}}
+                    </span>
+                </div>
+            </div>
+
+            <div class="col-sm-5">
+                <div class="form-group required has-feedback"
+                     ng-class="{'has-error': adr.isErrorVisible(addressForm.house)}">
+                    <label class="control-label" for="house">
+                        {{'checkout.addressForm.house' | translate}}</label>
+                    <input class="form-control"
+                           type="text"
+                           name="house" required
+                           ng-model="adr.model.house"
+                           ng-model-options="{ debounce: 500 }"
+                           id="house">
+                    <span ng-if="adr.isErrorVisible(addressForm.house)"
+                          class="glyphicon glyphicon-exclamation-sign form-control-feedback" aria-hidden="true"></span>
+                    <span ng-if="adr.isErrorVisible(addressForm.house)" class="help-block">
+                        {{'address.houseNumberInvalid' | translate}}
+                        {{'address.requiredFiled' | translate}}
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!--Street name and City-->
+        <div class="row">
+            <div class="col-sm-7">
+                <div class="form-group required has-feedback"
+                     ng-class="{'has-error': adr.isErrorVisible(addressForm.address)}">
+                    <label class="control-label" for="Address">{{'checkout.addressForm.Address' | translate}}</label>
+                    <input class="form-control" id="Address"
+                           name="address" required
+                           ng-model="adr.model.address"
+                           pattern="{{adr.az19}}"
+                           placeholder="{{'checkout.addressForm.AddressPh' | translate}}">
+                    <span ng-if="adr.isErrorVisible(addressForm.address)"
+                          class="glyphicon glyphicon-exclamation-sign form-control-feedback" aria-hidden="true"></span>
+                    <span ng-if="adr.isErrorVisible(addressForm.address)" class="help-block">
+                        {{'address.streetInvalid' | translate}}
+                        {{'address.requiredFiled' | translate}}
+                    </span>
+                </div>
+            </div>
+
+            <div class="col-sm-5">
+                <div class="form-group required has-feedback"
+                     ng-class="{'has-error': adr.isErrorVisible(addressForm.city)}">
+                    <label class="control-label" for="city">{{'checkout.addressForm.City' | translate}}</label>
+                    <input class="form-control"
+                           name="city" required
+                           ng-autocomplete
+                           pattern="{{adr.az}}"
+                           options="{types: '(cities)',country: adr.model.country}"
+                           ng-model="adr.model.city"
+                           placeholder="{{'checkout.addressForm.CityPh' | translate}}"
+                           id="city">
+                    <span ng-if="adr.isErrorVisible(addressForm.city)"
+                          class="glyphicon glyphicon-exclamation-sign form-control-feedback" aria-hidden="true"></span>
+                    <span ng-if="adr.isErrorVisible(addressForm.city)" class="help-block">
+                        {{'address.cityInvalid' | translate}}
+                        {{'address.requiredAndNoNumbersField' | translate}}
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!--Phone-->
+        <div class="row">
+            <div class="col-sm-9">
+                <div class="form-group required has-feedback"
+                     ng-class="{'has-error': adr.isErrorVisible(addressForm.phone)}">
+                    <label class="control-label" for="phone">{{'checkout.addressForm.phone' | translate}}</label>
+                    <input class="form-control"
+                           required
+                           name="phone"
+                           pattern="{{adr.tel}}"
+                           ng-model="adr.model.number"
+                           id="phone">
+                    <span ng-if="adr.isErrorVisible(addressForm.phone)"
+                          class="glyphicon glyphicon-exclamation-sign form-control-feedback" aria-hidden="true"></span>
+                    <span ng-if="adr.isErrorVisible(addressForm.phone)" class="help-block">
+                        {{'address.phoneInvalid' | translate}}
+                        {{'address.requiredFiled' | translate}}
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!--Email-->
+        <div class="row" ng-if="adr.withEmail">
+            <div class="col-sm-9">
+                <div class="form-group required has-feedback"
+                     ng-class="{'has-error': adr.isErrorVisible(addressForm.email)}">
+                    <label class="control-label" for="email">{{'checkout.addressForm.email' | translate}}</label>
+                    <input type="email" class="form-control"
+                           name="email" required
+                           ng-model="adr.model.email"
+                           id="email">
+                    <span ng-if="adr.isErrorVisible(addressForm.email)"
+                          class="glyphicon glyphicon-exclamation-sign form-control-feedback" aria-hidden="true"></span>
+                    <span ng-if="adr.isErrorVisible(addressForm.email)" class="help-block">
+                        {{'address.emailInvalid' | translate}}
+                        {{'address.requiredFiled' | translate}}
+                    </span>
+                </div>
+            </div>
+
+        </div>
+
+    </ng-form>
+
+</div>

@@ -1,0 +1,26 @@
+<div class="grey-container">
+    <div class="container">
+
+        <!--Multi-step indicator-->
+        <div class="row">
+            <div class="col-md-8">
+                <multistep-indicator current-step="4"></multistep-indicator>
+                <br/>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <white-box>
+                    <h1 ng-if="paymentStatus == 100" class="text-center">{{'paymentPage.successMsg' | translate}}</h1>
+                    <h1 ng-if="paymentStatus == -90" class="text-center">{{'paymentPage.cancelled' | translate}}</h1>
+                    <h1 ng-if="paymentStatus == -80" class="text-center">{{'paymentPage.expired' | translate}}</h1>
+                </white-box>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

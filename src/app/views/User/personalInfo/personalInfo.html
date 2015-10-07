@@ -1,0 +1,45 @@
+<div class="col-sm-9 my-account-overview">
+
+    <h2 class="block">{{'profile.personalInfoH' | translate}}</h2>
+
+    <div>
+        <dl class="table-like">
+            <dt>{{'profile.username' | translate}}</dt>
+            <dd>{{profile.billing_address.email || '-'}}</dd>
+            <dt>{{'profile.first_name' | translate}}</dt>
+            <dd>{{profile.billing_address.first_name || '-'}}</dd>
+            <dt>{{'profile.prefix' | translate}}</dt>
+            <dd>{{profile.billing_address.prefix || '-'}}</dd>
+            <dt>{{'profile.last_name' | translate}}</dt>
+            <dd>{{profile.billing_address.last_name || '-'}}</dd>
+            <dt>{{'profile.email' | translate}}</dt>
+            <dd>{{profile.billing_address.email || '-'}}</dd>
+            <dt>{{'profile.address.Phone' | translate}}</dt>
+            <dd>{{profile.billing_address.number || '-'}}</dd>
+        </dl>
+    </div>
+
+    <h2 class="block">{{'profile.addressH' | translate}}</h2>
+
+    <div>
+        <dl class="table-like">
+            <dt>{{'profile.address.AddressLine' | translate}}</dt>
+            <dd>{{profile.billing_address.address || '-'}}</dd>
+            <dt>{{'profile.address.HouseNumber' | translate}}</dt>
+            <dd>{{profile.billing_address.house || '-'}}</dd>
+            <dt>{{'profile.address.City' | translate}}</dt>
+            <dd>{{profile.billing_address.city || '-'}}</dd>
+            <dt>{{'profile.address.Country' | translate}}</dt>
+            <dd>{{profile.billing_address.country | country}}</dd>
+            <dt>{{'profile.address.postal_code' | translate}}</dt>
+            <dd>{{profile.billing_address.postal_code || '-'}}</dd>
+        </dl>
+    </div>
+
+    <div>
+        <button class="btn btn-info" ng-click="changeInfo()">
+            {{'profile.editInfoBtn' | translate}}
+        </button>
+    </div>
+
+</div>

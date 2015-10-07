@@ -1,0 +1,52 @@
+<div class="grey-container loginB-page">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <white-box>
+                    <div class="row">
+
+                        <div class="col-md-offset-1 col-md-10 col-lg-8 col-lg-offset-2">
+
+                            <h1 class="text-center">{{'login.signUpBtn' | translate}}</h1>
+
+                            <ng-form name="loginBForm">
+                                <address-form model="address" with-email="false"
+                                              show-validation="loginBForm.showValidation"></address-form>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="">
+                                        {{'checkout.addressForm.autoSignUp' | translate}}
+                                    </label>
+                                </div>
+
+                                <p>
+                                    {{'checkout.addressForm.regularInfo' | translate}}
+                                    <a href="#" ng-click="footerCtrl.openModal('footer.Terms', 'terms')">{{'checkout.addressForm.regularLink1' | translate}}</a>
+                                    {{'checkout.addressForm.regularLink2' | translate}}
+                                    <a href="#" ng-click="footerCtrl.openModal('footer.Cookies', 'cookies')">{{'checkout.addressForm.regularLink3' | translate}}</a>
+                                </p>
+
+                                <div class="text-center ">
+                                    <div class="col-sm-offset-4 col-sm-4">
+                                        <button type="button"
+                                                ng-click="saveUserAddress()"
+                                                class="btn btn-success btn-lg btn-block">
+                                            {{'login.signUpBtn' | translate}}
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </ng-form>
+
+
+                        </div>
+
+                    </div>
+                </white-box>
+            </div>
+
+        </div>
+
+    </div>
+</div>

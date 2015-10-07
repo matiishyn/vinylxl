@@ -1,0 +1,354 @@
+{
+  "errorMsgs": {
+    "signUpError": "User is already registered",
+    "noTracklist": "There is no tracklist yet",
+    "serverError": "Server is not responding",
+    "requiredFields": "* required fileds",
+    "addressValidation": "All fields are required",
+    "cookiesMsg": "This website uses cookies to ensure you get the best experience on our website",
+    "cookiesClose": "Got it!"
+  },
+  "tooltips": {
+    "sortingAz": "Sort by title",
+    "sortingFreq": "Sort by relevance"
+  },
+  "infoMsgs": {
+    "redirectMsg1": "You will be redirected to",
+    "redirectMsg2": "in",
+    "redirectMsg3": "seconds.",
+    "loading": "LOADING",
+    "signUpSuccess": "Subscribed"
+  },
+  "modal": {
+    "saveBtn": "Save",
+    "cancelBtn": "Cancel",
+    "okBtn": "Ok",
+    "closeBtn": "Close",
+    "personalInfoH": "PERSONAL INFORMATION"
+  },
+  "profile": {
+    "title": "MY ACCOUNT",
+    "personalInfoH": "PERSONAL INFORMATION",
+    "username": "Username:",
+    "name": "Name:",
+    "first_name": "First Name:",
+    "last_name": "Last Name:",
+    "house": "No.:",
+    "prefix": "Prefix:",
+    "email": "E-mail:",
+    "addressH": "ADDRESS",
+    "address": {
+      "AddressLine": "Street name:",
+      "HouseNumber": "No.:",
+      "City": "City:",
+      "Country": "Country:",
+      "postal_code": "Postcode:",
+      "Phone": "Phone:"
+    },
+    "OrderSummaryH": "ORDER SUMMARY",
+    "noPendingOrders": "No pending orders.",
+    "noHistory": "You have no order history yet.",
+    "menu": {
+      "Overview": "Overview",
+      "PersonalInformation": "Personal Information",
+      "PendingOrders": "Pending Orders"
+    },
+    "editInfoBtn": "Edit Personal Information"
+  },
+  "menu": {
+    "Overview": "Overview",
+    "PersonalInformation": "Personal Information",
+    "PendingOrders": "Pending Orders",
+    "OrderStatusHistory": "Order Status & History",
+    "noOrderHistoryLabel": "No order history is available",
+    "Label": "Label",
+    "MainGenre": "Main Genre",
+    "Genre": "Genre",
+    "Style": "Style",
+    "Wishlist": "Wishlist",
+    "seeMore": "See More",
+    "searchLabel": "Search here...",
+    "resetSearchTooltip": "Reset search",
+    "moreLabels": "More Labels...",
+    "moreGenres": "More Genres...",
+    "moreStyles": "More Styles...",
+    "Releases": "Release",
+    "moreReleases": "More Releases",
+    "Specials": "Special",
+    "moreSpecials": "More Specials"
+  },
+  "searchElement": {
+    "placeholder": "Search Here",
+    "labels": {
+      "all": "All",
+      "artists.name": "Artist",
+      "title": "Title",
+      "genre.descr": "Genre",
+      "styles": "Style",
+      "eancode": "EAN",
+      "Label": "Label",
+      "ProductNr": "Product nr.",
+      "Format": "Format",
+      "CountryOrigin": "Country of origin",
+      "ReleaseDate": "Release date",
+      "EAN": "EAN",
+      "Delivery": "Delivery",
+      "days": "days",
+      "oneWeek": "more than 1 week",
+      "twoWeeks": "more than 2 weeks"
+    }
+  },
+  "product": {
+    "units": "Number of units"
+  },
+  "filters": {
+    "Filters": "Filters",
+    "Origin": "Origin",
+    "Media": "Media",
+    "ReleaseDate": "Release date",
+    "dateFrom": "From:",
+    "dateTo": "To:",
+    "SelectOrigin": "Select Origin",
+    "SelectMedia": "Select Media",
+    "ApplyBtn": "Apply",
+    "ResetBtn": "Reset",
+    "allOriginPh": "All Origins",
+    "allMediaPh": "All Media",
+    "removeFilterTooltip": "Remove filter",
+    "sortByDate": "Sort by release date",
+    "itemsPerPage": "Items per page",
+    "origin": {
+      "Europe": "Europe",
+      "Import": "Import",
+      "Japan": "Japan",
+      "Netherlands": "Netherlands",
+      "USA": "USA"
+    }
+  },
+  "login": {
+    "signInH": "SIGN IN",
+    "signInBtn": "SIGN IN",
+    "signUpH": "NEW TO VINYLXL?",
+    "signUpBtn": "CREATE ACCOUNT",
+    "signInSoc": "Log in using a Social Network",
+    "signUpSoc": "Sign up using a Social Network",
+    "signInCustom": "Or E-mail",
+    "emailPc": "Enter e-mail",
+    "passPc": "Enter password",
+    "repeatPassPc": "Repeat password",
+    "passRec": "Forgot password?",
+    "rememberH": "Stay signed in",
+    "rememberP": "If this is a public or shared device, un-tick and sign out when you're done to protect your account.",
+    "signupConfirmH": "WELCOME TO VINYLXL",
+    "loginConfirmH": "Welcome back",
+    "mergeCartInfoMsg": "We found some elements that you previously saved and for convenience added them to your current cart. Please review it.",
+    "signupConfirmP": "Thanks for registering! You are now logged in.",
+    "signupEmailSent": "We have sent you an e-mail. Please follow instructions.",
+    "myAccountLink": "My account",
+    "logInLink": "Log in",
+    "logOutLink": "Log out",
+    "MyAccount": "My Account",
+    "AboveLogout": "Hi,"
+  },
+  "restorePass": {
+    "header": "RESTORE PASSWORD",
+    "backToLogin": "Go back to Login",
+    "button": "RESTORE",
+    "changedMsg": "Password was changed successfully"
+  },
+  "cart": {
+    "cartLink": "Cart",
+    "shoppingCartHeader": "SHOPPING CART",
+    "goToCartH": "GO TO SHOPPING CART",
+    "noItemsMsg": "Your cart is empty",
+    "cartTotalHeader": "CART TOTAL",
+    "continueShoppingBtn": "CONTINUE SHOPPING",
+    "cartTableHeaders": {
+      "Products": "Products",
+      "Price": "Price",
+      "Quantity": "Quantity",
+      "Total": "Total",
+      "removeBtnTitle": "Remove from cart"
+    },
+    "cartTotal": {
+      "Subtotal": "Subtotal:",
+      "Shipping": "Shipping:",
+      "Discount": "Discount:",
+      "Total": "Total:",
+      "enterCoupon": "Enter Coupon",
+      "GotCoupon": "Got a coupon?",
+      "apply": "APPLY",
+      "ProceedToCheckout": "PROCEED TO CHECKOUT",
+      "ExpressCheckout": "EXPRESS CHECKOUT",
+      "ExpressCheckoutTip": "Checkout without logging in.",
+      "CancelCheckout": "CANCEL CHECKOUT",
+      "GoToPayment": "GO TO PAYMENT"
+    }
+  },
+  "productVideo": {
+    "videoH": "Video",
+    "noVideoMsg": "No videos found"
+  },
+  "terms": {
+    "title": "I agree to",
+    "link": "Terms and Conditions",
+    "closeModalBtn": "Yes, I have read it"
+  },
+  "address": {
+    "fnameInvalidInfo": "First name field is invalid",
+    "prefixInvalidInfo": "Prefix field is invalid",
+    "lnameInvalidInfo": "Last name field is invalid",
+    "countryInvalidInfo": "Country field is invalid",
+    "cityInvalidInfo": "City field is invalid",
+    "houseNumberInvalidInfo": "House number field is invalid",
+    "postcodeInvalidInfo": "Postcode field is invalid",
+    "phoneInvalidInfo": "Phone field is invalid",
+    "addressInvalidInfo": "Street field is invalid",
+    "emailInvalidInfo": "E-mail field is invalid",
+    "passwordInvalidInfo": "Password field is invalid",
+    "mr": "Mr.",
+    "mrs": "Mrs.",
+    "requiredAndNoNumbersField": "This field cannot be empty and numbers are not allowed here",
+    "requiredFiled": "This field cannot be empty",
+    "fnameInvalid": "Please enter your first name.",
+    "lnameInvalid": "Please enter your last name.",
+    "postcodeInvalid": "Please enter your postcode.",
+    "houseNumberInvalid": "Please enter your house number.",
+    "streetInvalid": "Please enter your street name.",
+    "cityInvalid": "Please enter your city.",
+    "phoneInvalid": "Please enter your phone.",
+    "emailInvalid": "Please enter your e-mail.",
+    "fieldsInvalid": "Please fill all the fields"
+  },
+  "checkout": {
+    "detailsHeader": "CHECKOUT DETAILS",
+    "Details": "Details",
+    "ShippingInfo": "Shipping info",
+    "Payment": "Payment",
+    "GoBackBtn": "Go Back",
+    "Confirmation": "Confirmation",
+    "addressForm": {
+      "salutation": "Salutation",
+      "first_name": "First name",
+      "prefix": "Prefix",
+      "first_namePh": "Enter first name",
+      "last_name": "Last name",
+      "last_namePh": "Enter last name",
+      "house": "No.",
+      "Country": "Country",
+      "City": "City",
+      "CityPh": "Enter city",
+      "State": "State",
+      "postal_code": "Postal code",
+      "postal_codePh": "Enter postal code",
+      "Address": "Street name",
+      "AddressPh": "Enter street name",
+      "email": "E-mail Address",
+      "phone": "Phone",
+      "autoSignUp": "I would like to receive promotional newsletters from VinylXL.",
+      "regularInfo": "By creating an account, you agree to",
+      "regularLink1": "VinylXL's Terms & Conditions",
+      "regularLink2": "and",
+      "regularLink3": "Privacy Notice"
+    },
+    "countries": {
+      "NL": "Netherlands",
+      "BE": "Belgium",
+      "DE": "Germany",
+      "placeholder": "Select your country"
+    },
+    "InvoiceAddress": "Invoice address",
+    "ShipToInvoiceAddress": "Ship to my invoice address",
+    "ShipToDifferentAddress": "Ship to a different address",
+    "updateInfoMsg": "You can update your invoice address in your",
+    "AccountDetailsLink": "Account details"
+  },
+  "paymentPage": {
+    "title": "REVIEW & PAYMENT",
+    "PlaceOrder": "PLACE ORDER",
+    "successMsg": "Payment was successful",
+    "cancelled": "Payment was cancelled",
+    "expired": "Payment expired",
+    "paymentInfo": "PAYMENT METHOD INFORMATION"
+  },
+  "signUp": {
+    "title": "FOR EXCLUSIVE SALES AND PRODUCT NEWS",
+    "btn": "SIGN UP"
+  },
+  "footer": {
+    "contactUs": "CONTACT US",
+    "emailPlaceholder": "Enter e-mail",
+    "sendTitle": "SEND MESSAGE",
+    "About": "ABOUT VINYLXL",
+    "AboutStr": "VinylXL Nederland<br/>Het Bergje 6<br/>7313 GS Apeldoorn <br/> Kvk 08136371 <br/> BTW 14.65.19.358.B02",
+    "Contact": "CONTACT",
+    "ContactStr": "<a href='mailto:service@vinylxl.nl'>service@vinylxl.nl</a><br/>Tel. 085 002 05 55<br/>Mob. 06 39 83 70 59",
+    "copyrightInfo": "&copy; 2015 VinylXL. All Rights Reserved",
+    "Ordering": "ORDERING",
+    "Payment": "Payment",
+    "Returns": "Returns",
+    "General": "GENERAL",
+    "Cookies": "Privacy & Cookies",
+    "Disclaimer": "Disclaimer",
+    "Terms": "Terms & Conditions"
+  },
+  "productPage": {
+    "ShareLink": "Share:",
+    "noProducts": "No products found",
+    "noProductDescr": "No product description",
+    "addToCart": "Add to Cart",
+    "similarProducts": "Customers who bought this album also showed interest in",
+    "tracklist": "Tracklist",
+    "productDetails": "Product Details",
+    "DescriptionTab": "Description",
+    "DetailsTab": "Specification",
+    "ArtistsTab": "Artists",
+    "ExtraArtists": "Extra artists",
+    "ExtraInfoH": "Extra info",
+    "ClsTab": "Classic",
+    "NotesH": "Notes"
+  },
+  "order": {
+    "Status": "Status",
+    "CreatedOn": "Created on",
+    "CoverImage": "Cover Image"
+  },
+  "clsTab": {
+    "instruments": "Instruments",
+    "conductor": "Conductor",
+    "genre": "Genre",
+    "longtitle": "Longtitle",
+    "orchestra": "Orchestra",
+    "soloists": "Soloists"
+  },
+  "pagination": {
+    "prev": "Previous",
+    "next": "Next"
+  },
+  "genres": {
+    "BLU": "Blues",
+    "BRA": "Brasil",
+    "CLS": "Classical Music",
+    "COU": "Country",
+    "DAN": "Dance",
+    "JAZ": "Jazz",
+    "POP": "Pop",
+    "ROC": "Rock",
+    "VAR": "Miscellaneous",
+    "WOR": "World",
+    "M_A": "Metal Alternative"
+  },
+  "releases": {
+    "new": "Recent & New",
+    "expected": "Expected",
+    "midPrice": "Midprice Selection"
+  },
+  "wishlist": {
+    "title": "WISHLIST",
+    "edit": "Edit Wishlist",
+    "done": "Done Editing",
+    "noitems": "There are no items in your wishlist",
+    "add": "Add to Wishlist",
+    "remove": "Remove from Wishlist"
+  }
+}

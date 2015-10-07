@@ -1,0 +1,66 @@
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+/* Do not remove this comments bellow. It's the markers used by wiredep to inject
+   less dependencies when defined in the bower.json of your dependencies */
+@font-face {
+  font-family: 'robotoregular';
+  src: url('/assets/fonts/Roboto-Regular-webfont.eot');
+  src: url('/assets/fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/Roboto-Regular-webfont.woff') format('woff'), url('/assets/fonts/Roboto-Regular-webfont.ttf') format('truetype'), url('/assets/fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'robotoregular';
+  src: url('/assets/fonts/Roboto-Bold-webfont.eot');
+  src: url('/assets/fonts/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/Roboto-Bold-webfont.woff') format('woff'), url('/assets/fonts/Roboto-Bold-webfont.ttf') format('truetype'), url('/assets/fonts/Roboto-Bold-webfont.svg#robotobold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+.row {
+  margin: inherit;
+}
+h5 {
+  font-size: 16px;
+  font-weight: bold;
+}
+h2.block {
+  font-size: 18px;
+  background-color: #fbfbfb;
+  padding: 12px 20px;
+  margin-top: 0;
+}
+h2.bold {
+  font-weight: bold;
+}
+.btn-lg {
+  font-size: 16px;
+}
+.btn-success {
+  box-shadow: 0 3px #02a470;
+  border: none;
+}
+.help-block.has-error {
+  color: #a94442;
+}
+.form-group.has-error {
+  position: relative;
+}
+body ::selection {
+  background: #ffb7b7;
+}
+a:focus,
+input:focus,
+button:focus,
+.btn:focus,
+.btn.active:focus {
+  outline: none;
+}
+.select2-search-choice-close {
+  background-image: url("/assets/ui/select2.png");
+}
+/* Do not remove this comments bellow. It's the markers used by gulp-inject to inject
+   all your less files automatically */

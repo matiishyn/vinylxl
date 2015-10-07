@@ -1,0 +1,49 @@
+<div class="product-preview text-left" ng-click="productPreview.goToProductPage()">
+
+    <figure class="cap-bot">
+        <img fallback-image
+                ng-src="{{productPreview.CommonMethods.getCoverImg(productPreview.model.product_id, 'medium', '1')}}"
+                alt="{{::productPreview.model.title}}"
+                />
+        <figcaption>
+            <p>
+                <span class="wish-list-wrapper" tooltip="{{'wishlist.add' | translate}}">
+                    <i class="fa"
+                       ng-class="{'fa-heart-o': !productPreview.wishlist.productInWishlist(),
+                                  'fa-heart': productPreview.wishlist.productInWishlist()}"
+                       ng-mouseenter="productPreview.wishlist.hover = true;"
+                       ng-mouseleave="productPreview.wishlist.hover = false;"
+                       ng-click="productPreview.addToWishlist($event)"></i>
+                </span>
+
+                <span ng-click="productPreview.addToCart($event)" tooltip="{{'productPage.addToCart' | translate}}">
+                    <i class="fa fa-shopping-cart"></i>
+                </span>
+
+            </p>
+        </figcaption>
+    </figure>
+
+    <div ng-if="productPreview.editable && productPreview.model.inWishlist"
+         class="remove-from-wishlist"
+         ng-click="productPreview.removeFromWishlist($event)"><i
+            class="glyphicon glyphicon-remove"></i></div>
+
+    <div class="product-details">
+        <strong tooltip="{{::productPreview.model.title}}">{{::productPreview.model.title}}</strong>
+
+        <p>{{::productPreview.getArtists()}}</p>
+
+        <div class="clearfix rating-container">
+            <span class="price pull-left" ng-class="{'crossed': productPreview.model.special_price}">
+                {{::productPreview.model.retail_price | retailPrice | currency:'&#8364;' | euroCurrency}}
+            </span>
+
+            <span ng-if="productPreview.model.special_price" class="special-price price pull-left">
+                {{::productPreview.model.special_price | retailPrice | currency:'&#8364;' | euroCurrency}}
+            </span>
+        </div>
+    </div>
+
+
+</div>

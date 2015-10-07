@@ -1,0 +1,25 @@
+<ul class="nav navbar-nav">
+    <li ng-if="!loginLink.Auth.token">
+        <a ui-sref="home.loginA">
+            {{'login.logInLink' | translate}}
+        </a>
+    </li>
+
+    <li ng-if="loginLink.Auth.token">
+        <a href="#" ui-sref="home.profile">
+            {{'login.MyAccount' | translate}}
+        </a>
+    </li>
+
+    <li ng-if="loginLink.Auth.token" id="logout-link">
+        <span>
+            {{'login.AboveLogout' | translate}}
+            {{loginLink.Auth.profile.billing_address.first_name || loginLink.Auth.username.split('@')[0]}}
+        </span>
+        <a href="#" ng-click="loginLink.logout()">
+            {{'login.logOutLink' | translate}}
+        </a>
+    </li>
+
+</ul>
+

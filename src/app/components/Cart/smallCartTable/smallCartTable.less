@@ -1,0 +1,75 @@
+#small-cart-table {
+  font-size: 13px;
+  margin: 0;
+
+  tbody {
+    tr {
+
+      td {
+        border: none;
+        vertical-align: middle;
+        padding: 0;
+        text-align: right;
+        font-size: inherit;
+
+        &:first-child {
+          text-align: left;
+        }
+
+        &.text-center {
+          text-align: center;
+          padding-right: 5px;
+        }
+      }
+
+      &:last-child {
+        td {
+          padding-bottom: 9px;
+        }
+      }
+    }
+
+  }
+
+  tfoot {
+    td {
+      font-weight: bold;
+      font-size: 15px;
+      text-align: right;
+      padding: 15px 0;
+
+      // Total
+      &:first-child {
+        padding-right: 30px;
+      }
+    }
+  }
+
+  .cart-product-info {
+
+    .media-body {
+      padding-top: 10px;
+
+      h4.media-heading {
+        font-size: inherit;
+        font-weight: bold;
+        margin: 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 170px;
+        overflow: hidden;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+
+    img {
+      width: 46px;
+      height: 46px;
+      margin: 4px 4px 4px 0;
+    }
+
+  }
+}

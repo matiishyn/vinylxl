@@ -1,0 +1,22 @@
+<dl class="table-like">
+    <dt>{{'profile.name' | translate}}</dt>
+    <dd>
+        {{invoiceAddress.address.first_name}}
+        {{invoiceAddress.address.last_name || '-'}}
+    </dd>
+
+    <dt>{{'profile.address.AddressLine' | translate}}</dt>
+    <dd>
+        {{invoiceAddress.address.address}},
+        {{invoiceAddress.address.house}}
+    </dd>
+
+    <dt>{{'profile.address.City' | translate}}</dt>
+    <dd>{{invoiceAddress.address.city || '-'}}</dd>
+
+    <dt>{{'profile.address.Country' | translate}}</dt>
+    <dd>{{invoiceAddress.address.country | country}}</dd>
+
+    <dt>{{'profile.address.postal_code' | translate}}</dt>
+    <dd>{{invoiceAddress.address.postal_code || '-'}}</dd>
+</dl>

@@ -1,5 +1,7 @@
 # VinylXL - AngularJS application
 
+
+
 ## Run application
 1. Clone repo
 2. build source code
@@ -18,6 +20,9 @@ gulp serve
 * `gulp serve` to launch a browser sync server on your source files
 * `gulp serve:dist` to launch a server on your optimized application
 
+## Production
+- run `gulp build`
+- copy all files from `/dist` folder to your server
 
 ## Tech stack
 - AngularJS
@@ -25,5 +30,3 @@ gulp serve
 - Bootstrap, AngularUI Bootstrap
 - LESS
 - generator - https://github.com/Swiip/generator-gulp-angular
-
-

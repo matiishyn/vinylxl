@@ -1,21 +1,46 @@
-<app-header>
-    header
-</app-header>
+<ng-include src="'app/components/Common/Spinner/Spinner.html'"></ng-include>
+
+
+<!-- temp overlay window -->
+<div class="temp-shader" ng-if="displayTempLogin"></div>
+<div class="temp-cont text-center" ng-if="displayTempLogin">
+
+    <article>
+        <h1>VinylXL</h1>
+        <h2>Coming soon...</h2>
+        <input ng-model="secret" class="form-control" type="password" autofocus ng-change="tempChangePass(secret)"/>
+
+    </article>
+</div>
+<!-- temp overlay window -->
+
+
+<app-header></app-header>
 
 <navigation></navigation>
 
-<section>
-    http://getbootstrap.com/examples/carousel/
-    slider
-</section>
+<main>
 
-<section>
-    some categories
-</section>
+    <div ui-view>
+        <promo-carousel slides="Slides"></promo-carousel>
 
-<footer>
-    <div class="sign-up">
-        Sign up
+        <specials></specials>
+        <category model="newReleases"
+                  products="newReleases.products"
+                  go-to-products="goToNewReleases()"></category>
+        <category model="expectedReleases"
+                  products="expectedReleases.products"
+                  go-to-products="goToExpectedReleases()"></category>
+
+        <!--<category model="midPrice" products="midPrice.products" go-to-products="goToMidPrice()"></category>-->
     </div>
-    <div>Rest footer</div>
-</footer>
+
+
+
+</main>
+
+<div class="footer">
+    <sign-up></sign-up>
+
+    <app-footer></app-footer>
+</div>

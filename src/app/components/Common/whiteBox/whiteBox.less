@@ -1,0 +1,31 @@
+.white-box {
+  position: relative;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 0 @shadow-color;
+  overflow: hidden;
+
+  .row {
+    [class^="col-"]:first-child {
+      padding-left: 0;
+    }
+    [class^="col-"]:last-child {
+      padding-right: 0;
+    }
+  }
+
+}
+
+@media (max-width: @screen-sm-min) {
+  .white-box {
+
+    .row {
+      [class^="col-"] {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+
+  }
+}

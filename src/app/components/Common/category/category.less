@@ -1,0 +1,32 @@
+.category {
+  .title {
+    font-size: @title-font-size;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @media (max-width: @screen-lg-min) {
+    .flex-container {
+      width: 56vw;
+      justify-content: space-between;
+    }
+  }
+
+  @media (max-width: @screen-md-min) {
+    .flex-container {
+      width: 68vw;
+      justify-content: space-between;
+    }
+  }
+
+  @media (max-width: @screen-sm-min) {
+    .flex-container {
+      width: 75vw;
+      justify-content: space-around;
+    }
+  }
+}

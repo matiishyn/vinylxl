@@ -7,7 +7,129 @@
 
 // correct variables here: http://getbootstrap.com/customize/
 
-// colors
-@base-color-red: #EE573C;
-@color-light-grey: #FAFAFA;
+// Fonts
+@font-face {
+  font-family: 'robotoregular';
+  src: url('/assets/fonts/Roboto-Regular-webfont.eot');
+  src: url('/assets/fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/assets/fonts/Roboto-Regular-webfont.woff') format('woff'),
+  url('/assets/fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+  url('/assets/fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: 'robotoregular';
+  src: url('/assets/fonts/Roboto-Bold-webfont.eot');
+  src: url('/assets/fonts/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/assets/fonts/Roboto-Bold-webfont.woff') format('woff'),
+  url('/assets/fonts/Roboto-Bold-webfont.ttf') format('truetype'),
+  url('/assets/fonts/Roboto-Bold-webfont.svg#robotobold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-family-sans-serif: "robotoregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-base: @font-family-sans-serif;
+
+@font-size-base: 15px;
+
+//colors
+@white: #ffffff;
+@font-color-base: #777777;
+@text-color: @font-color-base;
+@shadow-color: #e3e4e8;
+@img-border: #e4e4e4;
+
+@vinyl-red: #ef583f;
+@bg-red: #f45a40;
+@bg-btn-red: #e54126;
+@price-color: #fe7c66;
+
+@menu-bg-red: #faf7e8;
+
+@brand-success: #03d693;
+@brand-success-darken: darken(@brand-success, 10%);
+@brand-info: #b0b0b0;
+@table-border-color: #ebebeb;
+@color-light-grey: #FAFAFA;
+@color-darker-grey: #c6ccd2;
+@bg-light-grey: #f5f5f5;
+@page-bg-grey: #f2f2f2;
+@hr-grey: #e1e1e1;
+@hr-bold-grey: #ebebeb;
+@h2-bg-grey: #fbfbfb;
+
+@footer-bg: #2a2d34;
+@footer-color-header: #a2a7b1;
+@footer-color: #dcdee2;
+@footer-color-static: #6c6d72;
+
+@modal-header-bg: #fdfbeb;
+
+// border
+@border-radius-base: 0px;
+@border-radius-large: 0px;
+@border-radius-small: 0px;
+
+// Responsive
+@screen-sm-min: 10px;
+@screen-sm-max: 991px;
+@screen-md-min: 992px;
+@screen-md-max: 1199px;
+@screen-lg-min: 1200px;
+@full-supported-width: @screen-sm-min; // let's support bootstrap 'sm'
+
+// Bootstrap temp fix of horizontal scrolling on tablet
+.row {
+  margin: inherit;
+}
+
+@title-font-size: 24px;
+@title-color: #fe8673;
+@link-color: @price-color;
+
+@wishlist-red-color: #e43a1e;
+
+@invalid-field-color: #a94442;
+
+// HEADERS
+@font-size-h1: 24px;
+@font-size-h2: 18px;
+@font-size-h3: 17px;
+@font-size-h4: 15px;
+h5 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+h2.block {
+  font-size: 18px;
+  background-color: @h2-bg-grey;
+  padding: 12px 20px;
+  margin-top: 0;
+}
+
+h2.bold {
+  font-weight: bold;
+}
+
+// BUTTONS
+.btn-lg {
+  font-size: 16px;
+}
+
+.btn-success {
+  box-shadow: 0 3px @brand-success-darken;
+  border: none;
+}
+
+// VALIDATION
+.help-block.has-error {
+  color: @invalid-field-color;
+}
+
+.form-group.has-error {
+  position: relative;
+}

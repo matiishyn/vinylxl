@@ -1,0 +1,64 @@
+<div class="order-history-table">
+    <div class="flex-table">
+        <div class="row-flex row-header">
+            <span></span>
+            <span>{{'order.Status' | translate}}</span>
+            <span>{{'order.CreatedOn' | translate}}</span>
+            <span>{{'cart.cartTableHeaders.Total' | translate}}</span>
+        </div>
+
+        <div class="row-parent" ng-repeat="order in orderHistoryTable.orders | orderBy:'-created'"
+             ng-if="order.status !== 'Cancelled'">
+            <div class="row-flex" ng-click="orderHistoryTable.expandOrder(order._id, $event)">
+
+                <span>{{$index + 1}}</span>
+                <span>{{order.status || '-'}}</span>
+                <span>{{order.created | date:'medium'}}</span>
+                <span>{{order.total | retailPrice | currency:'&#8364;' | euroCurrency}}</span>
+
+
+            </div>
+            <div class="expanded-section">
+                <invoice-address
+                        address="orderHistoryTable.orderInfo.customer.shipping_address || orderHistoryTable.orderInfo.customer.billing_address">
+                </invoice-address>
+
+                <h3>{{'cart.cartTableHeaders.Products' | translate}}:</h3>
+
+                <table class="table order-products">
+                    <thead></thead>
+                    <tr>
+                        <th>#</th>
+                        <th>{{'order.CoverImage' | translate}}</th>
+                        <th>{{'searchElement.labels.title' | translate}}</th>
+                        <th>{{'cart.cartTableHeaders.Quantity' | translate}}</th>
+                        <th>{{'cart.cartTableHeaders.Price' | translate}}</th>
+                    </tr>
+
+                    <tbody>
+                    <tr ng-repeat="product in orderHistoryTable.orderProducts">
+                        <td>{{$index+1}}</td>
+                        <td class="product-image">
+                            <a href="#" ui-sref="home.product({id: product[0]._id, title:product[0].title})">
+                                <img fallback-image ng-src="{{orderHistoryTable.CommonMethods.getCoverImg(product[0].product_id, 'medium', '1')}}"
+                                     alt="{{::product[0].title}}"/>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="#" ui-sref="home.product({id: product[0]._id, title:product[0].title})">
+                                {{product[0].title}} -
+                                {{orderHistoryTable.CommonMethods.getArtists(product[0].artists)}}
+                            </a>
+                        </td>
+                        <td>{{product[0].quantity}}</td>
+                        <td>{{product[0].boughtPrice | retailPrice | currency:'&#8364;' | euroCurrency}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>

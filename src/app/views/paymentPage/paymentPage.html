@@ -1,0 +1,51 @@
+<div class="grey-container payment-page">
+    <div class="container">
+
+        <!--Multi-step indicator-->
+        <div class="row">
+            <div class="col-md-8">
+                <multistep-indicator current-step="3"></multistep-indicator>
+                <br/>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 shopping-cart-section">
+                <h1 class="pull-left">{{'paymentPage.title' | translate}}</h1>
+
+                <div class="pull-right">
+                    <button type="button" class="btn btn-info btn-block" ui-sref="home.checkoutDetails">
+                        {{'checkout.GoBackBtn' | translate}}
+                    </button>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <white-box>
+
+                    <h2 class="block">{{'paymentPage.paymentInfo' | translate}}</h2>
+
+                    <payment-methods selected-country="{{selectedCountryForPayment}}"></payment-methods>
+
+                    <hr/>
+
+                    <cart-table readonly="true"></cart-table>
+                </white-box>
+            </div>
+
+            <div class="col-md-4 cart-total-section">
+                <h4>&nbsp;</h4>
+
+                <white-box>
+                    <cart-total-table total="vm.order.total" shipping="vm.order.shipping"></cart-total-table>
+
+                    <button type="button" class="btn btn-success btn-block proceed-btn" ng-click="placeOrder()">
+                        {{'paymentPage.PlaceOrder' | translate}}
+                    </button>
+                </white-box>
+
+            </div>
+        </div>
+
+    </div>
+</div>

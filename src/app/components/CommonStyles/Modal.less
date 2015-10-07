@@ -1,0 +1,54 @@
+// =============== MODAL WINDOW ==================
+.modal.in{
+  .modal-dialog,.modal-lg {
+    /*position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    margin: auto;*/
+    margin-top: 100px;
+  }
+  .modal-header {
+    background-color: @modal-header-bg;
+    text-align: center;
+    border: none;
+    padding: 5px;
+    .modal-title {
+      color: @vinyl-red;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .close-modal-x {
+      position: absolute;
+      right: 15px;
+      top: 4px;
+      cursor: pointer;
+      font-size: 18px;
+      color: #c6ccd2;
+    }
+
+  }
+
+  .modal-footer {
+    text-align: center;
+    border: none;
+    padding: 10px 30px 30px;
+
+    button {
+      margin: 0 10px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+}
+
+// tablet
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+  .modal.in {
+    .modal-dialog, .modal-lg {
+      margin-top: 10px;
+    }
+  }
+}
+// =============== END MODAL WINDOW ==================

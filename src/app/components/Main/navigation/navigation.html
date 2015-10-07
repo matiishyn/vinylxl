@@ -1,0 +1,118 @@
+<nav class="navigation">
+    <div class="container">
+        <div class="menu-wrapper">
+            <ul class="menu-list">
+                <li class="dropdown menu-item">
+                    <a href="#" class="dropdown-toggle">
+                        {{'menu.Label' | translate}}
+                    </a>
+
+                    <navigation-dropdown items="navigation.labels"
+                                         menu-type="label.key"
+                                         class="multicolumn"
+                                         update-method="getLabels"
+                                         more-title="{{'menu.moreLabels' | translate}}"
+                                         title="{{'menu.Label' | translate}}"></navigation-dropdown>
+                </li>
+
+                <li class="dropdown menu-item">
+                    <a href="#" class="dropdown-toggle">
+                        {{'menu.MainGenre' | translate}}
+                    </a>
+
+                    <navigation-dropdown translate-title="true"
+                                         disable-more="true"
+                                         class="second-dropdown"
+                                         update-method="getMainGenres"
+                                         more-title="{{'menu.moreGenres' | translate}}"
+                                         title="{{'menu.MainGenre' | translate}}"
+                                         menu-type="genre.main.key"
+                                         items="navigation.mainGenres"></navigation-dropdown>
+                </li>
+
+                <li class="dropdown menu-item">
+                    <a href="#" class="dropdown-toggle">
+                        {{'menu.Genre' | translate}}
+                    </a>
+
+                    <navigation-dropdown class="third-dropdown multicolumn"
+                                         title="{{'menu.Genre' | translate}}"
+                                         more-title="{{'menu.moreGenres' | translate}}"
+                                         menu-type="genre.key"
+                                         update-method="getGenres"
+                                         items="navigation.genres"></navigation-dropdown>
+                </li>
+
+                <li class="dropdown menu-item">
+                    <a href="#" class="dropdown-toggle">
+                        {{'menu.Style' | translate}}
+                    </a>
+
+                    <navigation-dropdown class="fourth-dropdown multicolumn"
+                                         title="{{'menu.Style' | translate}}"
+                                         more-title="{{'menu.moreStyles' | translate}}"
+                                         menu-type="styles"
+                                         update-method="getStyles"
+                                         items="navigation.styles"></navigation-dropdown>
+                </li>
+
+                <li class="dropdown menu-item divider"></li>
+
+                <!--RELEASES-->
+                <li class="dropdown menu-item">
+                    <a href="#" class="dropdown-toggle">
+                        {{'menu.Releases' | translate}}
+                    </a>
+
+                    <navigation-dropdown class=""
+                                         title="{{'menu.Releases' | translate}}"
+                                         more-title="{{'menu.moreReleases' | translate}}"
+                                         menu-type="releases"
+                                         disable-more="navigation.isHiddenShowMoreForReleases()"
+                                         update-method="getReleases"
+                                         items="navigation.releases"></navigation-dropdown>
+                </li>
+
+                <!--SPECIALS-->
+                <li class="dropdown menu-item">
+                    <a href="#" class="dropdown-toggle">
+                        {{'menu.Specials' | translate}}
+                    </a>
+
+                    <navigation-dropdown class=""
+                                         menu-type="specials"
+                                         disable-more="true"
+                                         items="navigation.specials"></navigation-dropdown>
+                </li>
+            </ul>
+
+            <div class="wish-list-wrapper"
+                 ng-init="navigation.wishlist = {};"
+                 ng-mouseenter="navigation.wishlist.hover = true;"
+                 ng-mouseleave="navigation.wishlist.hover = false;">
+                <a href="#" ui-sref="home.wishlist">
+                    <i class="fa"
+                       ng-class="{'fa-heart': navigation.wishlist.hover, 'fa-heart-o': !navigation.wishlist.hover}"></i>
+                    {{'menu.Wishlist' | translate}}
+                </a>
+            </div>
+
+            <div class="socials-wrapper">
+                <ul class="list-inline">
+                    <li>
+                        <a target="_blank" ng-href="{{navigation.facebookLink}}" tooltip="Facebook">
+                            <img src="/assets/ui/fb_icon.png" alt="facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" ng-href="{{navigation.twitterLink}}" tooltip="Twitter">
+                            <img src="/assets/ui/twitter_icon.png" alt="twitter">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+</nav>

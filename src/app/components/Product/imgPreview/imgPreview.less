@@ -1,0 +1,103 @@
+.img-preview {
+  display: inline-block;
+  margin: 0 22px 22px 0;
+
+  a.overlay-window-link {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 255px;
+    height: 255px;
+  }
+
+  .image-space, .large-image {
+    width: 255px;
+    height: 255px;
+    margin-bottom: 5px;
+  }
+
+  .xl-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: width .3s, height .3s;
+
+    &:hover {
+      //width: 500px;
+      //height: 500px;
+    }
+  }
+
+  .preview-images-list {
+    max-width: 250px;
+  }
+
+  .preview-images {
+
+    margin-left: 0;
+    display: flex;
+
+    li {
+
+      padding: 0;
+      margin-right: 2px;
+      text-align: center;
+
+      &:focus {
+        outline: none;
+      }
+
+      a {
+        display: inline-block;
+
+        img {
+          width: 67px;
+          height: 67px;
+        }
+
+        img.inactive-preview {
+          opacity: 0.5;
+        }
+      }
+
+    }
+
+  }
+
+  // style on hover on image
+  figure.image-with-figcaption {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    &:hover {
+      figcaption {
+        opacity: 1;
+      }
+    }
+
+    figcaption  {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0,0,0,.3);
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      line-height: 255px;
+      text-align: center;
+      transition: opacity .3s;
+
+      .glyphicon {
+        color: #fff;
+        font-size: 34px;
+      }
+    }
+
+  }
+
+
+
+}

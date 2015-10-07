@@ -1,0 +1,37 @@
+<div class="video-list">
+    <script id="video-pagination.tmpl.html" type="text/ng-template">
+        <ul class="pagination" ng-if="1 < pages.length || !autoHide">
+            <li ng-if="boundaryLinks" ng-class="{ disabled : pagination.current == 1 }">
+                <a href="" ng-click="setCurrent(1)">&laquo;</a>
+            </li>
+            <li ng-if="directionLinks" ng-class="{ disabled : pagination.current == 1 }">
+                <a href="" ng-click="setCurrent(pagination.current - 1)"><img src="assets/ui/previous.png" alt="Previous" title="Previous"/></a>
+            </li>
+            <li ng-repeat="pageNumber in pages track by $index" ng-class="{ active : pagination.current == pageNumber, disabled : pageNumber == '...' }">
+                <a href="" ng-click="setCurrent(pageNumber)">{{ pageNumber }}</a>
+            </li>
+
+            <li ng-if="directionLinks" ng-class="{ disabled : pagination.current == pagination.last }">
+                <a href="" ng-click="setCurrent(pagination.current + 1)"><img src="assets/ui/next.png" alt="Next" title="Next"/></a>
+            </li>
+            <li ng-if="boundaryLinks"  ng-class="{ disabled : pagination.current == pagination.last }">
+                <a href="" ng-click="setCurrent(pagination.last)">&raquo;</a>
+            </li>
+        </ul>
+    </script>
+
+    <h4>{{'productVideo.videoH' | translate}}</h4>
+
+    <div ng-if="!videos.length">
+        <p>{{'productVideo.noVideoMsg' | translate}}</p>
+    </div>
+
+    <div ng-if="videos.length">
+        <div dir-paginate="video in videos | itemsPerPage: 1">
+            <h4>{{video.title}}</h4>
+            <iframe ng-src="{{video.source | youtubeEmbed | trustAsResourceUrl}}" frameborder="0" allowfullscreen></iframe>
+
+        </div>
+        <dir-pagination-controls class="video-pagination-controls" template-url="video-pagination.tmpl.html"></dir-pagination-controls>
+    </div>
+</div>
